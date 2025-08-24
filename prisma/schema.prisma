@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+/**
+ * Prisma Schema 配置文件
+ * 文件路径: prisma/schema.prisma
+ * 创建时间: 2025-08-24 16:08
+ * 开发思路:
+ * 1. 定义数据库连接和 Prisma 客户端配置
+ * 2. 建立初始的用户数据模型
+ * 3. 为 Hajimi GRE 备考平台奠定数据基础
+ * 4. 支持后续的题目、练习记录等模型扩展
+ * 设计决策:
+ * - 使用 PostgreSQL 作为生产数据库（Supabase）
+ * - 启用 Prisma Client 生成
+ * - 采用 UUID 作为主键类型（更安全）
+ * - 设置合理的字段约束和默认值
+ */
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/**
+ * 用户模型 (User Model)
+ * 功能说明:
+ * - 存储用户基本信息和认证数据
+ * - 支持邮箱和用户名登录
+ * - 记录用户创建和更新时间
+ * - 为后续扩展学习记录、成绩统计等功能预留空间
+ * 字段设计:
+ * - id: UUID 主键，更安全的标识符
+ * - email: 邮箱地址，用于登录和通知
+ * - username: 用户名，用于显示和社交功能
+ * - name: 真实姓名或昵称
+ * - createdAt/updatedAt: 审计字段，追踪数据变更
+ */
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String?  @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
