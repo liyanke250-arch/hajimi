@@ -74,7 +74,7 @@ export default function Home() {
         
         {/* 副标题 - 项目描述和价值主张 */}
         <p className="text-lg text-center sm:text-left text-gray-600">
-          GRE智能备考平台 - 基于AI的个性化学习方案
+          GRE智能备考平台 - 基于AI的个性化学习方案 🚀 [部署测试 v2.0]
         </p>
         
         {/* 功能特性列表 - 突出核心功能 */}
