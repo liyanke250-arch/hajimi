@@ -1,27 +1,74 @@
+/**
+ * 全局样式文件 (Global Styles)
+ * 文件路径: src/app/globals.css
+ * 创建时间: 2025-08-24 15:35
+ * 
+ * 开发思路:
+ * 1. 导入 Tailwind CSS 的三个核心层
+ * 2. 定义 CSS 变量支持主题切换
+ * 3. 设置全局基础样式
+ * 4. 添加自定义工具类
+ * 
+ * 设计决策:
+ * - 使用 CSS 变量实现暗色/亮色主题
+ * - 响应系统偏好的颜色方案
+ * - 提供一致的字体和颜色基准
+ * - 扩展 Tailwind 功能
+ * 
+ * 技术实现:
+ * - @tailwind 指令导入框架样式
+ * - :root 定义全局 CSS 变量
+ * - @media 查询响应系统主题
+ * - @layer 添加自定义工具类
+ */
+
+/* Tailwind CSS 核心样式导入 */
+/* base: 重置样式和基础元素样式 */
 @tailwind base;
+
+/* components: 组件类样式 */
 @tailwind components;
+
+/* utilities: 工具类样式 */
 @tailwind utilities;
 
+/* 全局 CSS 变量定义 - 亮色主题 */
+/* 在根元素上定义，可被所有子元素继承 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;  /* 背景色：纯白 */
+  --foreground: #171717;  /* 前景色：深灰黑 */
 }
 
+/* 暗色主题 CSS 变量 */
+/* 响应用户系统的颜色方案偏好 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a;  /* 背景色：深黑 */
+    --foreground: #ededed;  /* 前景色：浅灰白 */
   }
 }
 
+/* 全局 body 样式 */
+/* 应用 CSS 变量定义的颜色和字体 */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);                    /* 使用前景色变量 */
+  background: var(--background);               /* 使用背景色变量 */
+  font-family: Arial, Helvetica, sans-serif;   /* 后备字体栈 */
+  /* 注意: Inter 字体通过 layout.tsx 中的 next/font 应用 */
 }
 
+/* 自定义工具类层 */
+/* 扩展 Tailwind 的工具类集合 */
 @layer utilities {
+  /* 文本平衡工具类 */
+  /* 改善多行文本的视觉平衡，避免孤立词 */
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* 未来可扩展的工具类：
+   * .scrollbar-hide - 隐藏滚动条
+   * .gradient-text - 渐变文字效果
+   * .glass-morphism - 玻璃形态效果
+   */
 }
