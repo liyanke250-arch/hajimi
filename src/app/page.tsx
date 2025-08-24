@@ -68,8 +68,8 @@ export default function Home() {
         />
         
         {/* 主标题 - 项目名称和欢迎信息 */}
-        <h1 className="text-4xl font-bold text-center sm:text-left">
-          欢迎来到 Hajimi
+        <h1 className="text-4xl font-bold mb-8 text-center">
+          欢迎来到 Hajimi - CI/CD 测试
         </h1>
         
         {/* 副标题 - 项目描述和价值主张 */}
