@@ -117,6 +117,17 @@ Closes #123"
 
 #### 4.1 推送到远程仓库
 
+**推荐方式：使用 GitHub Desktop**
+
+由于网络环境原因，推荐使用 GitHub Desktop 推送代码：
+
+1. 打开 GitHub Desktop
+2. 确认要推送的提交
+3. 点击 "Push origin" 按钮
+4. ✅ 稳定可靠，自动处理网络问题
+
+**命令行方式（备选）**
+
 ```bash
 # 首次推送分支
 git push -u origin feature/user-authentication
@@ -124,6 +135,8 @@ git push -u origin feature/user-authentication
 # 后续推送
 git push
 ```
+
+> 💡 **提示**: 如果命令行推送失败，请使用 GitHub Desktop。它内置了更好的网络处理机制。
 
 #### 4.2 创建 Pull Request
 
@@ -215,6 +228,31 @@ git stash pop                       # 恢复暂存的修改
 ---
 
 ## 🐛 问题排查流程
+
+### 0. Git 推送失败
+
+**症状**: `git push` 显示 "Failed to connect to github.com" 或 "Connection reset"
+
+**解决方案**:
+
+```bash
+# 方案 1: 使用 GitHub Desktop（推荐）
+# 打开 GitHub Desktop，点击 "Push origin" 即可
+
+# 方案 2: 配置 Git 使用代理（如果有代理）
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+git push origin main
+
+# 方案 3: 使用 SSH 方式（需要配置 SSH 密钥）
+git remote set-url origin git@github.com:用户名/hajimi.git
+git push origin main
+```
+
+**原因**: 
+- GitHub Desktop 内置了更好的网络处理和代理支持
+- 命令行 Git 默认不使用系统代理
+- 在中国大陆访问 GitHub 可能需要特殊网络配置
 
 ### 1. 开发服务器无法启动
 
