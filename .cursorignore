@@ -1,0 +1,83 @@
+# Cursor AI 忽略文件配置
+# 这些文件/目录不会被 Cursor AI 索引和分析
+
+# 依赖目录
+node_modules/
+.next/
+.vercel/
+.turbo/
+
+# 构建产物
+dist/
+build/
+out/
+.cache/
+
+# 日志文件
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 环境变量（敏感信息）
+.env
+.env*.local
+.env.production
+secrets.txt
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 测试覆盖率报告
+coverage/
+.nyc_output/
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+
+# 大型静态资源（如果有）
+public/videos/
+public/large-assets/
+
+# 第三方库文档
+docs/vendor/
+
+# 备份文件
+*.bak
+*.backup
+
+# 编译后的 Prisma 客户端
+node_modules/.prisma/
+node_modules/@prisma/
+
+# 锁文件（通常不需要AI分析）
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Git 相关
+.git/
+.gitignore
+
+# 其他不需要分析的文件
+*.min.js
+*.min.css
+*.map

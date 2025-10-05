@@ -1,21 +1,21 @@
 {
   // ESLint 配置文件
   // 创建时间: 2025-08-24 15:35
-  // 
+  //
   // 开发思路:
   // 1. 使用 Next.js 官方推荐的 ESLint 配置
   // 2. 包含 Core Web Vitals 规则，确保性能最佳实践
   // 3. 保持配置简洁，避免过度复杂的规则
-  // 
+  //
   // 配置说明:
   // - "next/core-web-vitals": Next.js 官方配置集
   //   包含 React、React Hooks、Next.js 特定规则
   //   以及 Core Web Vitals 性能检查
-  // 
+  //
   // 未来扩展点:
   // - 可添加自定义规则覆盖
   // - 可配置特定文件的规则例外
   // - 可集成 Prettier 规则
-  
+
   "extends": ["next/core-web-vitals"]
 }

@@ -35,25 +35,25 @@
 /* 全局 CSS 变量定义 - 亮色主题 */
 /* 在根元素上定义，可被所有子元素继承 */
 :root {
-  --background: #ffffff;  /* 背景色：纯白 */
-  --foreground: #171717;  /* 前景色：深灰黑 */
+  --background: #ffffff; /* 背景色：纯白 */
+  --foreground: #171717; /* 前景色：深灰黑 */
 }
 
 /* 暗色主题 CSS 变量 */
 /* 响应用户系统的颜色方案偏好 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;  /* 背景色：深黑 */
-    --foreground: #ededed;  /* 前景色：浅灰白 */
+    --background: #0a0a0a; /* 背景色：深黑 */
+    --foreground: #ededed; /* 前景色：浅灰白 */
   }
 }
 
 /* 全局 body 样式 */
 /* 应用 CSS 变量定义的颜色和字体 */
 body {
-  color: var(--foreground);                    /* 使用前景色变量 */
-  background: var(--background);               /* 使用背景色变量 */
-  font-family: Arial, Helvetica, sans-serif;   /* 后备字体栈 */
+  color: var(--foreground); /* 使用前景色变量 */
+  background: var(--background); /* 使用背景色变量 */
+  font-family: Arial, Helvetica, sans-serif; /* 后备字体栈 */
   /* 注意: Inter 字体通过 layout.tsx 中的 next/font 应用 */
 }
 
@@ -65,7 +65,7 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   /* 未来可扩展的工具类：
    * .scrollbar-hide - 隐藏滚动条
    * .gradient-text - 渐变文字效果

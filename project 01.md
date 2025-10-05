@@ -7,9 +7,11 @@
 ## 🛠️ 第零步：准备环境 (Setup)
 
 ### Git 分支
+
 确保您位于项目的主分支上。这是 Sprint 0 的第一个任务，`main` 分支是理想的起点。
 
 ### 信息暂存区
+
 在您的本地电脑上，打开一个安全的文本编辑器（如 VS Code, Sublime Text, 或系统自带的记事本），创建一个名为 `secrets.txt` 的临时文件。
 
 **⚠️ 至关重要**: 立即将 `secrets.txt` 添加到项目根目录的 `.gitignore` 文件中，以防止任何意外提交。
@@ -17,27 +19,32 @@
 ### 验证 (Verification)
 
 #### 检查当前分支
+
 在您的项目终端中运行，确认您在 `main` 分支：
 
 ```bash
 git branch
 ```
-*(预期输出中 `* main` 会被高亮显示)*
+
+_(预期输出中 `_ main` 会被高亮显示)\*
 
 #### 检查 .gitignore
+
 确认 `secrets.txt` 已被正确忽略：
 
 ```bash
 # 在.gitignore文件中添加 'secrets.txt' 这一行，然后运行:
 cat .gitignore | grep "secrets.txt"
 ```
-*(预期输出应为 `secrets.txt`)*
+
+_(预期输出应为 `secrets.txt`)_
 
 ## 🎯 第一步：生成 (Generation) - AI 作为"领航员"
 
 **目标**: 由我（AI）为您提供清晰的操作指南和需要收集的信息清单。
 
 ### 操作
+
 您已经成功执行了这一步。根据您的指令，我将提供以下三项内容：
 
 ### a. Supabase 项目创建指南
@@ -56,6 +63,7 @@ cat .gitignore | grep "secrets.txt"
 - **API Keys**: 导航到 "Project Settings" > "API"。复制以下两个密钥：
   - `anon public` 密钥 (ANON_KEY)
   - `service_role secret` 密钥 (SERVICE_ROLE_KEY) - **此密钥拥有最高权限，绝不能泄露**
+
 ### b. Vercel 项目创建指南
 
 1. **访问官网**: 打开新标签页，前往 `vercel.com`
@@ -83,10 +91,10 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY="[YOUR-ANON-KEY]"
 # 这是服务角色密钥，拥有完全访问权限。切勿在前端暴露
 SUPABASE_SERVICE_ROLE_KEY="[YOUR-SERVICE-ROLE-KEY]"
 ```
+
 ### 验证 (Verification)
 
-**检查清单**: 请确认您已从我这里清楚地收到了以上 a、b、c 三项完整的指南和模板。
----
+## **检查清单**: 请确认您已从我这里清楚地收到了以上 a、b、c 三项完整的指南和模板。
 
 ## 🔧 第二步：执行与收集 (Manual Execution & Info Gathering)
 
@@ -121,8 +129,8 @@ SUPABASE_SERVICE_ROLE_KEY="[YOUR-SERVICE-ROLE-KEY]"
 # 注意：此命令会显示您的密钥，请确保环境安全
 cat secrets.txt
 ```
-*(预期输出应清晰地展示您从 Supabase 收集的所有五个值)*
----
+
+## _(预期输出应清晰地展示您从 Supabase 收集的所有五个值)_
 
 ## 🔍 第三步：审查与生成最终配置 (Review & Finalize Config)
 
@@ -195,20 +203,24 @@ SUPABASE_SERVICE_ROLE_KEY="ey..."
 ### 验证 (Verification)
 
 #### 验证 .gitignore 规则
+
 在项目根目录运行此命令：
 
 ```bash
 cat .gitignore | grep ".env"
 ```
-*(预期输出必须是 `.env`，确认该文件被忽略)*
+
+_(预期输出必须是 `.env`，确认该文件被忽略)_
 
 #### 验证 Git 状态
+
 运行 `git status`，这是最关键的验证：
 
 ```bash
 git status
 ```
-*(预期输出应该在 "Changes to be committed" 或 "Untracked files" 中看到 `.env.example` 和 `.gitignore`，但**绝对不能看到 `.env` 文件**。如果看到 `.env`，说明 `.gitignore` 配置有误，切勿提交！)*
+
+_(预期输出应该在 "Changes to be committed" 或 "Untracked files" 中看到 `.env.example` 和 `.gitignore`，但**绝对不能看到 `.env` 文件**。如果看到 `.env`，说明 `.gitignore` 配置有误，切勿提交！)_
 
 #### 提交安全文件
 
@@ -218,12 +230,14 @@ git commit -m "chore: setup environment variables (Task 0.1)"
 ```
 
 #### 验证清理
+
 确认临时密钥文件已被删除：
 
 ```bash
 ls secrets.txt
 ```
-*(预期输出应该是错误消息，如 "ls: cannot access 'secrets.txt': No such file or directory"，证明文件已不存在)*
+
+_(预期输出应该是错误消息，如 "ls: cannot access 'secrets.txt': No such file or directory"，证明文件已不存在)_
 
 ---
 

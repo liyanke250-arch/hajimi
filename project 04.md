@@ -1,17 +1,21 @@
 # 🚀 任务 0.4: 自动化部署 (CI/CD) - 单颗粒 SOP
 
 ## 🎯 总目标
+
 将本地的 Git 仓库与 GitHub 和 Vercel 平台连接，配置好生产环境变量，并建立一个完整的自动化部署流水线（CI/CD）。最终实现的效果是：每当您推送代码到 GitHub 的 main 分支，Vercel 都会自动拉取最新代码、构建并部署您的项目。
 
 ## ⚠️ 前置条件
+
 - 您已拥有一个 GitHub 账户
 - 您的本地项目已经是一个功能完备的 Git 仓库（任务 0.2 已完成）
 - 您已在 Vercel 上创建了一个项目占位符（任务 0.1 已完成）
 
 ---
+
 ## 📦 第一步：创建 GitHub 仓库并推送本地代码 (Code Hosting)
 
 ### 📍 目标
+
 将您本地的代码库推送到一个远程的、私有的 GitHub 仓库中，使其成为代码的"唯一真实来源"(Single Source of Truth)。
 
 ### 🔧 在 GitHub 上创建仓库
@@ -31,22 +35,31 @@ GitHub 会展示一个页面，上面有 **"…or push an existing repository fr
 
 ```shell
 # 1. 将您本地的Git仓库与刚刚创建的GitHub远程仓库进行关联
-# 'origin' 是远程仓库的默认别名
+# 'origin' 是远程仓库的默认别名，指向您的GitHub仓库
+# 这个命令建立了本地仓库与远程仓库的连接关系
 git remote add origin https://github.com/[你的GitHub用户名]/hajimi.git
 
 # 2. (可选，最佳实践) 确保您的主分支名为 'main'
+# 现代Git项目推荐使用'main'作为默认分支名，而不是旧的'master'
+# -M 参数会强制重命名当前分支，即使目标分支名已存在
 git branch -M main
 
 # 3. 将本地的 'main' 分支推送到远程的 'origin' 仓库
-# '-u' 参数会建立本地分支与远程分支的追踪关系，方便未来直接使用 'git push'
+# -u 参数（--set-upstream）会建立本地分支与远程分支的追踪关系
+# 设置追踪关系后，未来可以直接使用 'git push' 而不需要指定远程仓库和分支
+# 这是首次推送，会将所有本地提交历史上传到GitHub
 git push -u origin main
 ```
+
 ### ✅ 验证 (Verification)
 
 #### 检查远程关联是否成功
+
 在终端运行以下命令：
 
 ```shell
+# 检查远程仓库配置是否正确
+# -v 参数（--verbose）会显示远程仓库的详细信息，包括fetch和push的URL
 git remote -v
 ```
 
@@ -56,7 +69,9 @@ git remote -v
 origin  https://github.com/[你的GitHub用户名]/hajimi.git (fetch)
 origin  https://github.com/[你的GitHub用户名]/hajimi.git (push)
 ```
+
 #### 检查代码是否推送成功
+
 刷新您在浏览器中打开的 GitHub 仓库页面。您应该能看到您本地项目的所有文件（如 `package.json`, `src/`, `prisma/` 等）都已显示在页面上。
 
 ---
@@ -64,6 +79,7 @@ origin  https://github.com/[你的GitHub用户名]/hajimi.git (push)
 ## 🔗 第二步：将 Vercel 项目连接到 GitHub 仓库 (Platform Integration)
 
 ### 📍 目标
+
 授权 Vercel 访问您的 GitHub 仓库，这样 Vercel 才能在您推送代码时收到通知并自动拉取。
 
 ### 🔧 登录 Vercel 并进入项目设置
@@ -86,9 +102,11 @@ origin  https://github.com/[你的GitHub用户名]/hajimi.git (push)
 **检查 Vercel Git 设置**: 在 Vercel 项目的 **"Settings"** → **"Git"** 页面，您应该能看到 **"Connected Git Repository"** 部分现在显示的是您 GitHub 仓库的名称 `[你的GitHub用户名]/hajimi`，并且生产分支已设置为 `main`。
 
 ---
+
 ## ⚙️ 第三步：在 Vercel 中配置生产环境变量 (Configuration)
 
 ### 📍 目标
+
 将所有连接 Supabase 所需的密钥和 URL 安全地配置到 Vercel 的环境变量中。这将允许您部署在 Vercel 上的应用能够成功连接到您的云端 Supabase 数据库。
 
 ### 🔧 进入 Vercel 环境变量设置
@@ -99,24 +117,26 @@ origin  https://github.com/[你的GitHub用户名]/hajimi.git (push)
 
 从您本地的 `.env` 文件中，逐一复制以下变量的**键 (Key) 和值 (Value)**并添加到 Vercel 中。请务必仔细核对，确保使用了正确的值！
 
-| 键 (Key) | 值 (Value) - 从您的 .env 文件复制 | 注释 (Comment) |
-|:---|:---|:---|
-| `DATABASE_URL` | `postgresql://postgres.[ref]:[pass]@[host]:6543/postgres?pgbouncer=true` | ⚠️ **至关重要**: Vercel在IPv4网络运行，必须使用端口为6543的连接池URL！ |
-| `DIRECT_URL` | `postgresql://postgres:[pass]@[host]:5432/postgres` | 虽然应用运行时不用，但为未来在Vercel构建步骤中运行迁移做准备，必须使用端口为5432的直连URL |
-| `NEXT_PUBLIC_SUPABASE_URL` | `https://[ref].supabase.co` | 您的Supabase项目公开URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `ey...` | 您的Supabase项目公开anon密钥 |
-| `SUPABASE_SERVICE_ROLE_KEY` | `ey...` | ⚠️ **机密**: 您的Supabase service_role 密钥，绝不能暴露 |
-| `NEXTAUTH_URL` | `https://[您的Vercel项目域名]` | **注意**: 这里不再是localhost，而是Vercel为您生成的生产域名 (例如: hajimi.vercel.app) |
-| `NEXTAUTH_SECRET` | `[您生成的随机密钥]` | 您为NextAuth生成的安全密钥 |
+| 键 (Key)                        | 值 (Value) - 从您的 .env 文件复制                                        | 注释 (Comment)                                                                            |
+| :------------------------------ | :----------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| `DATABASE_URL`                  | `postgresql://postgres.[ref]:[pass]@[host]:6543/postgres?pgbouncer=true` | ⚠️ **至关重要**: Vercel在IPv4网络运行，必须使用端口为6543的连接池URL！                    |
+| `DIRECT_URL`                    | `postgresql://postgres:[pass]@[host]:5432/postgres`                      | 虽然应用运行时不用，但为未来在Vercel构建步骤中运行迁移做准备，必须使用端口为5432的直连URL |
+| `NEXT_PUBLIC_SUPABASE_URL`      | `https://[ref].supabase.co`                                              | 您的Supabase项目公开URL                                                                   |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `ey...`                                                                  | 您的Supabase项目公开anon密钥                                                              |
+| `SUPABASE_SERVICE_ROLE_KEY`     | `ey...`                                                                  | ⚠️ **机密**: 您的Supabase service_role 密钥，绝不能暴露                                   |
+| `NEXTAUTH_URL`                  | `https://[您的Vercel项目域名]`                                           | **注意**: 这里不再是localhost，而是Vercel为您生成的生产域名 (例如: hajimi.vercel.app)     |
+| `NEXTAUTH_SECRET`               | `[您生成的随机密钥]`                                                     | 您为NextAuth生成的安全密钥                                                                |
 
 ### ✅ 验证 (Verification)
 
 **检查 Vercel 环境变量列表**: 在 Vercel 的 **"Environment Variables"** 页面，请仔细核对您添加的所有变量的键名是否存在拼写错误，以及值的开头和结尾是否与您的 `.env` 文件完全一致。
 
 ---
+
 ## 🧪 第四步：触发自动部署并最终验收 (CI/CD Test & Acceptance)
 
 ### 📍 目标
+
 通过一次真实的 Git 推送，验证整个 CI/CD 流水线是否能按预期工作，并最终通过公共域名访问您的应用。
 
 ### 🔧 在本地做一次小修改
@@ -125,26 +145,36 @@ origin  https://github.com/[你的GitHub用户名]/hajimi.git (push)
 2. 修改文件中的一小段文本，以便我们能直观地看到部署是否成功。例如，将主标题修改一下：
 
 ```tsx
-// src/app/page.tsx
-// ...
-<h1 className="text-4xl font-bold text-center sm:text-left">
-  欢迎来到 Hajimi on Vercel!
+/**
+ * 修改首页组件以测试CI/CD部署流程
+ * 文件路径: src/app/page.tsx
+ *
+ * 目的: 通过修改页面内容来验证自动部署是否正常工作
+ * 修改内容: 在主标题中添加"on Vercel"标识，便于在生产环境中确认部署成功
+ */
+
+// 找到主标题组件并修改文本内容
+<h1 className="text-center text-4xl font-bold sm:text-left">
+  欢迎来到 Hajimi on Vercel! {/* 添加"on Vercel"标识用于部署验证 */}
 </h1>
-// ...
 ```
 
 ### 📤 提交并推送到 GitHub
 
 ```shell
 # 将所有修改添加到暂存区
+# . 表示添加当前目录及其子目录下的所有修改文件
 git add .
 
 # 创建一个描述性的提交
+# -m 参数允许直接在命令行中指定提交信息，而不需要打开编辑器
+# 提交信息格式：类型(scope): 描述，这里使用 'chore' 表示维护性任务
 git commit -m "chore: test vercel auto-deployment"
 
 # 推送到main分支
+# 由于之前已经设置了追踪关系（git push -u），现在可以直接使用简化命令
+# 这会将本地main分支的新提交推送到远程origin仓库的main分支
 git push origin main
-
 ```
 
 ### ✅ 验证 (Verification)
@@ -167,19 +197,20 @@ git push origin main
 ## 🎉 任务完成
 
 ### 📝 操作
+
 在您的项目管理工具中，将任务 0.4 标记为 **"完成"**。
 
 ---
 
 ## 📊 任务状态
 
-| 任务编号 | 任务名称 | 状态 |
-|:---:|:---:|:---:|
-| 0.1 | 云服务初始化 SOP | ✅ **已完成** |
-| 0.2 | 本地项目初始化 SOP | ✅ **已完成** |
-| 0.3 | 集成 Prisma SOP | ✅ **已完成** |
-| 0.4 | 自动化部署 (CI/CD) SOP | 🔄 **进行中** |
+| 任务编号 |        任务名称        |     状态      |
+| :------: | :--------------------: | :-----------: |
+|   0.1    |    云服务初始化 SOP    | ✅ **已完成** |
+|   0.2    |   本地项目初始化 SOP   | ✅ **已完成** |
+|   0.3    |    集成 Prisma SOP     | ✅ **已完成** |
+|   0.4    | 自动化部署 (CI/CD) SOP | 🔄 **进行中** |
 
 ---
 
-*此文档随项目开发持续更新*
+_此文档随项目开发持续更新_

@@ -2,19 +2,19 @@
  * 根布局组件 (Root Layout)
  * 文件路径: src/app/layout.tsx
  * 创建时间: 2025-08-24 15:35
- * 
+ *
  * 开发思路:
  * 1. Next.js 14 App Router 的根布局组件
  * 2. 定义全站的 HTML 结构和元数据
  * 3. 配置全局字体和样式
  * 4. 提供一致的页面框架
- * 
+ *
  * 设计决策:
  * - 使用 Inter 字体：现代、易读、支持多语言
  * - 设置中文语言标签：SEO 和无障碍优化
  * - 导入全局样式：Tailwind CSS 基础样式
  * - 元数据配置：搜索引擎优化
- * 
+ *
  * 技术实现:
  * - 使用 next/font/google 优化字体加载
  * - 利用 Next.js 14 的 Metadata API
@@ -44,15 +44,15 @@ export const metadata: Metadata = {
 
 /**
  * 根布局组件
- * 
+ *
  * 功能说明:
  * - 定义整个应用的 HTML 结构
  * - 应用全局字体样式
  * - 渲染子页面内容
- * 
+ *
  * 参数:
  * @param children - 子页面或组件内容
- * 
+ *
  * 返回:
  * 完整的 HTML 文档结构
  */

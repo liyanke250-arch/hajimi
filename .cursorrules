@@ -1,0 +1,236 @@
+# Hajimi GRE智能备考平台 - Cursor AI 规则配置
+# 创建时间: 2025-10-05
+# 用途: 指导AI助手理解项目上下文和编码规范
+
+## 项目概述
+- 项目名称: Hajimi - GRE智能备考平台
+- 技术栈: Next.js 14 + TypeScript + Prisma + Supabase + Vercel
+- 目标: 为GRE考生提供智能化的备考练习和数据分析
+
+## 核心技术栈规则
+
+### Next.js 14 (App Router)
+- 使用 App Router 架构，不使用 Pages Router
+- 所有页面组件放在 `src/app/` 目录
+- 使用 Server Components 作为默认，仅在需要客户端交互时使用 'use client'
+- 使用 Server Actions 处理表单提交和数据变更
+- 路由文件命名: page.tsx, layout.tsx, loading.tsx, error.tsx
+
+### TypeScript
+- 严格模式启用，所有代码必须有类型定义
+- 避免使用 `any` 类型，使用 `unknown` 或具体类型
+- 为所有函数参数和返回值添加类型注解
+- 使用接口(interface)定义数据结构
+- 路径别名使用 `@/` 指向 `src/` 目录
+
+### Prisma ORM
+- 所有数据库操作通过 Prisma Client
+- Schema 定义在 `prisma/schema.prisma`
+- 使用事务处理复杂的数据操作
+- 字段命名使用 camelCase，数据库映射使用 snake_case
+- 添加详细的模型注释说明业务逻辑
+
+### Tailwind CSS
+- 优先使用 Tailwind 工具类，避免自定义 CSS
+- 使用 CSS 变量支持主题切换
+- 响应式设计使用移动优先策略 (sm:, md:, lg:)
+- 复杂组件可以使用 @apply 提取公共样式
+- 颜色使用语义化命名 (background, foreground)
+
+## 代码规范
+
+### 命名约定
+- 组件文件: PascalCase (UserProfile.tsx)
+- 工具函数: camelCase (calculateScore.ts)
+- 常量: UPPER_SNAKE_CASE (MAX_QUESTIONS)
+- 类型/接口: PascalCase (User, QuestionType)
+- CSS类名: kebab-case (custom-scrollbar)
+
+### 文件组织
+```
+src/
+├── app/                 # Next.js App Router 页面
+├── components/          # 可复用组件
+│   ├── ui/             # 基础UI组件
+│   └── features/       # 业务功能组件
+├── lib/                # 工具函数和配置
+│   ├── prisma.ts       # Prisma客户端单例
+│   ├── supabase.ts     # Supabase客户端
+│   └── utils.ts        # 通用工具函数
+├── types/              # TypeScript 类型定义
+├── hooks/              # 自定义 React Hooks
+└── actions/            # Server Actions
+```
+
+### 注释规范
+- 所有文件必须有文件头注释（中文）
+- 包含: 文件路径、创建时间、开发思路、设计决策
+- 复杂逻辑必须有行内注释解释"为什么"
+- 函数/组件必须有功能说明和参数文档
+- 参考 `docs/coding-standards.md` 获取详细规范
+
+### 组件开发规则
+- 组件职责单一，可复用性优先
+- Props 使用 TypeScript 接口定义
+- 使用 React Hooks (useState, useEffect, useCallback, useMemo)
+- 避免 prop drilling，复杂状态使用 Context 或状态管理库
+- 组件文件结构: imports → types → component → exports
+
+### 错误处理
+- 使用 try-catch 捕获异步操作错误
+- API 路由返回标准化的错误响应
+- 前端显示用户友好的错误消息
+- 记录详细的错误日志用于调试
+- 使用 Next.js error.tsx 处理页面级错误
+
+### 性能优化
+- 使用 Next.js Image 组件优化图片
+- 大列表使用虚拟滚动或分页
+- 使用 React.memo 避免不必要的重渲染
+- 使用 useCallback 和 useMemo 优化性能
+- 懒加载非关键组件 (dynamic import)
+
+## 数据库设计规则
+
+### Prisma Schema
+- 模型名称使用单数 PascalCase (User, Question)
+- 表名映射使用复数 snake_case (@@map("users"))
+- 主键优先使用 CUID (@default(cuid()))
+- 必须包含审计字段 (createdAt, updatedAt)
+- 关系字段明确定义外键和级联规则
+
+### 数据迁移
+- 每次 schema 修改后运行 `npx prisma migrate dev`
+- 迁移文件使用描述性名称
+- 生产环境使用 `npx prisma migrate deploy`
+- 重要数据变更前先备份数据库
+
+## API 开发规则
+
+### Server Actions
+- 文件放在 `src/actions/` 目录
+- 使用 'use server' 指令
+- 验证所有输入参数
+- 返回类型化的结果对象 `{ success: boolean, data?: T, error?: string }`
+- 处理认证和授权检查
+
+### REST API (如需要)
+- 使用 Next.js Route Handlers (route.ts)
+- 遵循 RESTful 设计原则
+- 使用适当的 HTTP 状态码
+- 返回 JSON 格式响应
+- 实现速率限制和安全防护
+
+## 安全规则
+
+### 环境变量
+- 敏感信息存储在 .env 文件
+- .env 文件必须在 .gitignore 中
+- 公开变量使用 NEXT_PUBLIC_ 前缀
+- 生产环境变量在 Vercel 配置
+
+### 数据验证
+- 前端和后端都要验证用户输入
+- 使用 Zod 或 Yup 进行 schema 验证
+- 防止 SQL 注入 (Prisma 自动处理)
+- 防止 XSS 攻击 (React 自动转义)
+
+### 认证授权
+- 使用 Supabase Auth 处理用户认证
+- 保护所有需要认证的路由
+- 使用中间件检查用户权限
+- 敏感操作需要二次验证
+
+## Git 提交规范
+
+### 提交信息格式
+```
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+```
+
+### 类型 (type)
+- feat: 新功能
+- fix: 修复bug
+- docs: 文档更新
+- style: 代码格式调整
+- refactor: 重构代码
+- test: 测试相关
+- chore: 构建/工具配置
+
+### 示例
+```
+feat(auth): 实现用户注册功能
+
+- 添加注册表单组件
+- 集成 Supabase Auth
+- 添加邮箱验证
+
+Closes #123
+```
+
+## AI 协作指南
+
+### 代码生成要求
+- 生成的代码必须符合项目规范
+- 包含完整的中文注释
+- 提供类型定义和错误处理
+- 考虑性能和安全性
+- 遵循现有的代码风格
+
+### 问题解决流程
+1. 理解需求和上下文
+2. 检查现有代码和文档
+3. 提出解决方案和权衡
+4. 实现代码并添加注释
+5. 建议测试方案
+
+### 代码审查重点
+- 类型安全性
+- 错误处理完整性
+- 性能优化机会
+- 安全漏洞检查
+- 代码可维护性
+
+## 项目特定规则
+
+### GRE 题目处理
+- 题目内容使用 JSON 存储
+- 支持数学公式渲染 (KaTeX)
+- 题目类型: verbal, quantitative, writing
+- 难度级别: easy, medium, hard
+- 标签系统用于知识点分类
+
+### 用户学习数据
+- 记录每次答题的详细信息
+- 计算准确率和用时统计
+- 生成个性化学习报告
+- 实现艾宾浩斯遗忘曲线算法
+- 保护用户隐私数据
+
+### 性能目标
+- 首屏加载时间 < 2秒
+- Core Web Vitals 达到 Good 标准
+- 支持离线缓存关键资源
+- 优化数据库查询性能
+- 使用 CDN 加速静态资源
+
+## 参考文档
+- PRD.md: 产品需求文档
+- DEVELOPMENT.md: 开发文档
+- docs/coding-standards.md: 代码注释规范
+- project 01-04.md: Sprint 任务文档
+
+## 注意事项
+- 优先使用项目已有的组件和工具函数
+- 重大架构变更需要团队讨论
+- 保持代码简洁和可读性
+- 定期更新依赖包版本
+- 遵循渐进式开发原则
+
+---
+最后更新: 2025-10-05
+维护者: Hajimi 开发团队
