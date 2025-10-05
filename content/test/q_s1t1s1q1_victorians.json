@@ -27,29 +27,29 @@
       "title": "聚焦维多利亚时代 (The Victorian Era)",
       "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
       "content": [
-        "蕨类狂热: 维多利亚时代的中产阶级中曾掀起一股名为蕨类狂热（Pteridomania）的潮流。人们痴迷于在乡间搜寻、在家中种植和用蕨类植物图案装饰一切物品，它成为了当时的一种身份和品味的象征。",
-        "圣诞贺卡的诞生: 世界上第一张商业圣诞贺卡于1843年在伦敦诞生。这张由亨利·科尔爵士委托设计的贺卡，描绘了一个家庭举杯庆祝的场景，它的出现永久地改变了人们庆祝圣诞节的方式。",
-        "伦敦大恶臭: 1858年的夏天，由于未经处理的污水被直接排入泰晤士河，伦敦经历了一场史无前例的大恶臭（The Great Stink）。这场危机最终迫使议会批准了工程师约瑟夫·巴瑟杰的现代化排污系统建设计划，奠定了现代伦敦的基础设施。"
+        "**“蕨类狂热”**: 维多利亚时代的中产阶级中曾掀起一股名为“蕨类狂热”（Pteridomania）的潮流。人们痴迷于在乡间搜寻、在家中种植和用蕨类植物图案装饰一切物品，它成为了当时的一种身份和品味的象征。",
+        "**圣诞贺卡的诞生**: 世界上第一张商业圣诞贺卡于1843年在伦敦诞生。这张由亨利·科尔爵士委托设计的贺卡，描绘了一个家庭举杯庆祝的场景，它的出现永久地改变了人们庆祝圣诞节的方式。",
+        "**“伦敦大恶臭”**: 1858年的夏天，由于未经处理的污水被直接排入泰晤士河，伦敦经历了一场史无前例的“大恶臭”（The Great Stink）。这场危机最终迫使议会批准了工程师约瑟夫·巴瑟杰的现代化排污系统建设计划，奠定了现代伦敦的基础设施。"
       ]
     },
     "logicType": {
       "officialTag": "contrast-paradox (意外/悖论逻辑)",
       "signal_words": ["paradox", "both...and"],
       "oneLiner": "一个群体，同时拥有两种截然相反的特质",
-      "challenge": "识别出 cosmopolitan（世界性的）的反义词。"
+      "challenge": "识别出 `cosmopolitan`（世界性的）的反义词。"
     },
     "logicAndWalkthrough": [
       {
         "step": 1,
         "step_name_cn": "识别逻辑关系",
-        "strategy_expert": "句首的 paradox（悖论）是解题的最强信号词，它预示着句子中存在一对相互矛盾的概念。both...and... 结构连接了这两个矛盾点。",
-        "thought_process_os": "看到 paradox，就像看到了信号灯，马上就要找反义词。后面一个是 cosmopolitan（世界性的，见多识广的），那前面空格里肯定是个意思相反的词，比如狭隘的、土鳖的。"
+        "strategy_expert": "句首的 `paradox`（悖论）是解题的最强信号词，它预示着句子中存在一对相互矛盾的概念。`both...and...` 结构连接了这两个矛盾点。",
+        "thought_process_os": "看到 `paradox`，就像看到了信号灯，马上就要找反义词。后面一个是 `cosmopolitan`（世界性的，见多识广的），那前面空格里肯定是个意思相反的词，比如“狭隘的”、“土鳖的”。"
       },
       {
         "step": 2,
         "step_name_cn": "筛选选项",
-        "strategy_expert": "在选项中寻找与 cosmopolitan（世界性的）构成反义关系的词。",
-        "thought_process_os": "A. capricious: 反复无常的。无关。B. insular: 思想狭隘的，与外界隔绝的。完美反义词。C. mercenary: 唯利是图的。无关。D. idealistic: 理想主义的。无关。E. intransigent: 不妥协的，固执的。有点关系，但 insular 更直接地与 cosmopolitan 构成地理和文化上的对立。"
+        "strategy_expert": "在选项中寻找与 `cosmopolitan`（世界性的）构成反义关系的词。",
+        "thought_process_os": "A. capricious: 反复无常的。无关。B. insular: 思想狭隘的，与外界隔绝的。完美反义词。C. mercenary: 唯利是图的。无关。D. idealistic: 理想主义的。无关。E. intransigent: 不妥协的，固执的。有点关系，但 `insular` 更直接地与 `cosmopolitan` 构成地理和文化上的对立。"
       }
     ],
     "optionsAnalysis": [
@@ -57,7 +57,7 @@
         "option": "A. capricious",
         "isCorrect": false,
         "analysis": {
-          "analysis_text": "这是一个无关概念的选项。反复无常的描述的是性格的不稳定性，与世界性的所描述的眼界和文化开放性没有直接的逻辑对立关系。",
+          "analysis_text": "**这是一个无关概念的选项。** “反复无常的”描述的是性格的不稳定性，与“世界性的”所描述的眼界和文化开放性没有直接的逻辑对立关系。",
           "trap_types": ["Irrelevant Concept"]
         }
       },
@@ -65,7 +65,7 @@
         "option": "B. insular",
         "isCorrect": true,
         "analysis": {
-          "analysis_text": "insular 意为思想狭隘的，与世隔绝的，源自拉丁语 insula（岛屿），完美地与 cosmopolitan（世界性的）构成了岛屿心态与世界公民之间的直接对立，精准地体现了题干中的 paradox（悖论）。",
+          "analysis_text": "`insular` 意为“思想狭隘的，与世隔绝的”，源自拉丁语 `insula`（岛屿），**完美地与 `cosmopolitan`（世界性的）构成了“岛屿心态”与“世界公民”之间的直接对立**，精准地体现了题干中的 `paradox`（悖论）。",
           "trap_types": null
         }
       },
@@ -73,7 +73,7 @@
         "option": "C. mercenary",
         "isCorrect": false,
         "analysis": {
-          "analysis_text": "这是一个无关概念的选项。唯利是图的描述的是行为动机，与世界性的所描述的文化视野无关。",
+          "analysis_text": "**这是一个无关概念的选项。** “唯利是图的”描述的是行为动机，与“世界性的”所描述的文化视野无关。",
           "trap_types": ["Irrelevant Concept"]
         }
       },
@@ -81,7 +81,7 @@
         "option": "D. idealistic",
         "isCorrect": false,
         "analysis": {
-          "analysis_text": "这是一个无关概念的选项。理想主义的与世界性的之间没有必然的逻辑对立。一个人完全可以是理想主义的世界公民。",
+          "analysis_text": "**这是一个无关概念的选项。** “理想主义的”与“世界性的”之间没有必然的逻辑对立。一个人完全可以是理想主义的世界公民。",
           "trap_types": ["Irrelevant Concept"]
         }
       },
@@ -89,7 +89,7 @@
         "option": "E. intransigent",
         "isCorrect": false,
         "analysis": {
-          "analysis_text": "这是一个相关但不精确的选项。不妥协的可能与思想开放（cosmopolitan 的一个方面）有些许对立，但 insular 直接描述了视野的局限性，是更精确、更直接的反义词。",
+          "analysis_text": "**这是一个相关但不精确的选项。** “不妥协的”可能与思想开放（cosmopolitan 的一个方面）有些许对立，但 `insular` 直接描述了视野的局限性，是更精确、更直接的反义词。",
           "trap_types": ["Related but Imprecise"]
         }
       }
@@ -97,14 +97,14 @@
     "sentenceWithAnswer": "It is a paradox of the Victorians that they were both insular and, through their empire, cosmopolitan.",
     "translation": "维多利亚时代的人们有一个矛盾之处：他们既思想狭隘，同时又通过其帝国而具有世界性。",
     "grammaticalAnalysis": {
-      "translation_notes": "It is a paradox that... 是一个常见的句式，用来引出一个看似矛盾但实际存在的情况。",
+      "translation_notes": "`It is a paradox that...` 是一个常见的句式，用来引出一个看似矛盾但实际存在的情况。",
       "breakdown_hierarchical": [
-        "It 是形式主语，真正的主语是 that 引导的从句 that they were both insular and, through their empire, cosmopolitan。",
-        "of the Victorians 指出这个悖论是属于维多利亚时代的人们的。",
-        "both...and... 连接了两个并列的形容词 insular 和 cosmopolitan，作为主语 they 的表语。",
-        "through their empire 是介词短语，作状语，解释了他们如何变得 cosmopolitan。"
+        "`It` 是形式主语，真正的主语是 `that` 引导的从句 `that they were both insular and, through their empire, cosmopolitan`。",
+        "`of the Victorians` 指出这个悖论是属于维多利亚时代的人们的。",
+        "`both...and...` 连接了两个并列的形容词 `insular` 和 `cosmopolitan`，作为主语 `they` 的表语。",
+        "`through their empire` 是介词短语，作状语，解释了他们如何变得 `cosmopolitan`。"
       ],
-      "visual_tree_mermaid": "graph TD; A[It is a paradox] --> B[that...]; B --> C{Victorians were}; C --> D[both insular]; C -- and --> E[cosmopolitan]; E -- how? --> F[through their empire];"
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"It is a paradox\\\"] --> B[\\\"that...\\\"];\\n    B --> C{\\\"Victorians were\\\"};\\n    C --> D[\\\"both insular\\\"];\\n    C -- \\\"and\\\" --> E[\\\"cosmopolitan\\\"];\\n    E -- \\\"how?\\\" --> F[\\\"through their empire\\\"];"
     }
   },
   "vocabulary": [
@@ -116,7 +116,7 @@
       "definition_cn": "n. 悖论，自相矛盾的情况",
       "etymology": {
         "deconstruction": "para- (beside, alongside; contrary to, 与...相反) + doxa (opinion, 观点)",
-        "constructive_essence": "指与普遍观点（doxa）相悖（para-）的言论，引申为看似矛盾却可能正确的陈述。"
+        "constructive_essence": "**指与普遍观点（doxa）相悖（para-）的言论，引申为看似矛盾却可能正确的陈述。**"
       },
       "cognates": [
         { "word": "orthodox", "definition_cn": "正统的" },
@@ -135,7 +135,7 @@
       "definition_cn": "n. 维多利亚时代的人 adj. 维多利亚时代的",
       "etymology": {
         "deconstruction": "Victoria (维多利亚女王) + -an (…的)",
-        "constructive_essence": "指与维多利亚女王（Queen Victoria）统治时期（1837-1901）的英国人或风格相关。"
+        "constructive_essence": "**指与维多利亚女王（Queen Victoria）统治时期（1837-1901）的英国人或风格相关。**"
       },
       "cognates": [],
       "example": {
@@ -151,7 +151,7 @@
       "definition_cn": "adj. 世界性的，见多识广的",
       "etymology": {
         "deconstruction": "cosmo- (world, 世界) + politan (citizen, 公民)",
-        "constructive_essence": "认为自己是世界公民（citizen of the world）的人，引申为见多识广、不受地域或国家限制的。"
+        "constructive_essence": "**认为自己是“世界公民”（citizen of the world）的人，引申为见多识广、不受地域或国家限制的。**"
       },
       "cognates": [
         { "word": "cosmos", "definition_cn": "宇宙" },
@@ -169,8 +169,8 @@
       "phonetic": "[kəˈprɪʃəs]",
       "definition_cn": "adj. 反复无常的，任性的",
       "etymology": {
-        "deconstruction": "源于意大利语 capriccio，意为突然的奇想，可能与 capo (头) + riccio (刺猬)有关，形容头发像刺猬一样突然竖起的惊吓。",
-        "constructive_essence": "形容如同无法预测的奇想一样，情绪或行为变化无常。"
+        "deconstruction": "源于意大利语 `capriccio`，意为“突然的奇想”，可能与 `capo` (头) + `riccio` (刺猬)有关，形容头发像刺猬一样突然竖起的惊吓。",
+        "constructive_essence": "**形容如同无法预测的奇想一样，情绪或行为变化无常。**"
       },
       "cognates": [],
       "example": {
@@ -185,8 +185,8 @@
       "phonetic": "[ˈɪnsjələ(r)]",
       "definition_cn": "adj. 思想狭隘的，与世隔绝的",
       "etymology": {
-        "deconstruction": "insula (island, 岛屿) + -ar (形容词后缀)",
-        "constructive_essence": "字面意思为像岛屿一样的，引申为因与外界隔绝而产生的狭隘视野或心态。"
+        "deconstruction": "`insula` (island, 岛屿) + -ar (形容词后缀)",
+        "constructive_essence": "**字面意思为“像岛屿一样的”，引申为因与外界隔绝而产生的狭隘视野或心态。**"
       },
       "cognates": [
         { "word": "peninsula", "definition_cn": "半岛" },
@@ -204,8 +204,8 @@
       "phonetic": "[ˈmɜːsənəri]",
       "definition_cn": "adj. 唯利是图的 n. 雇佣兵",
       "etymology": {
-        "deconstruction": "merces (payment, reward, 报酬) + -ary (…的人)",
-        "constructive_essence": "指完全为了金钱报酬（merces）而工作的人，即雇佣兵或唯利是图者。"
+        "deconstruction": "`merces` (payment, reward, 报酬) + -ary (…的人)",
+        "constructive_essence": "**指完全为了金钱报酬（merces）而工作的人，即雇佣兵或唯利是图者。**"
       },
       "cognates": [
         { "word": "commerce", "definition_cn": "商业" },
@@ -224,7 +224,7 @@
       "definition_cn": "adj. 理想主义的",
       "etymology": {
         "deconstruction": "ideal (理想) + -istic (…主义的)",
-        "constructive_essence": "指相信并追求理想（idea）的，有时带有不切实际的意味。"
+        "constructive_essence": "**指相信并追求理想（idea）的，有时带有不切实际的意味。**"
       },
       "cognates": [
         { "word": "idea", "definition_cn": "想法，理念" }
@@ -242,7 +242,7 @@
       "definition_cn": "adj. 不妥协的，不让步的",
       "etymology": {
         "deconstruction": "in- (not, 不) + transigere (to come to an agreement, 达成协议)",
-        "constructive_essence": "指不达成协议的，即拒绝任何妥协或让步。"
+        "constructive_essence": "**指“不达成协议”的，即拒绝任何妥协或让步。**"
       },
       "cognates": [
         { "word": "transaction", "definition_cn": "交易 (双方达成协议的过程)" }
@@ -254,4 +254,3 @@
     }
   ]
 }
-

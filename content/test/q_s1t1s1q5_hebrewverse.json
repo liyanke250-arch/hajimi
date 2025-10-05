@@ -1,0 +1,269 @@
+{
+  "uuid": "q_s1t1s1q5_hebrewverse",
+  "source_id": "Stage 1 Test 1 Section 1-5",
+  "version": 10.0,
+  "createdAt": "2025-09-21T08:40:00.000Z",
+  "updatedAt": "2025-09-21T08:40:00.000Z",
+  "difficulty": {
+    "level": "Easy",
+    "score": 2.0,
+    "factors": {
+      "sentence_complexity": "低",
+      "vocab_rarity": "低",
+      "logic_subtlety": "低"
+    }
+  },
+  "questionText": "The reconstruct known work is beautiful and also probably _________: it is the only Hebrew verse written by a woman.",
+  "options": [
+    { "choice": "A", "text": "singular" },
+    { "choice": "B", "text": "unique" },
+    { "choice": "C", "text": "archaic" },
+    { "choice": "D", "text": "counterfeit" },
+    { "choice": "E", "text": "valuable" },
+    { "choice": "F", "text": "fake" }
+  ],
+  "correctAnswer": "A, B",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦希伯来语 (Hebrew)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "**“复活”的语言**: 希伯来语是语言学史上的一个奇迹。作为一门古老的语言，它在公元200年左右逐渐停止作为日常口语使用，但在近两千年的时间里，它一直作为宗教、文学和学术语言被保存下来。19世纪末，在语言学家埃利泽·本-耶胡达等人的努力下，希伯来语被成功“复活”，成为现代以色列国的官方语言。",
+        "**从右到左的书写**: 希伯来文的书写方向是从右到左，这与大多数西方语言相反。其字母表由22个辅音字母组成，元音通常不被书写出来，而是通过在辅音字母上下添加符号来表示，但在现代日常使用中这些元音符号常常被省略。",
+        "**《死海古卷》**: 20世纪中叶发现的《死海古卷》是现存最古老的一批希伯来语圣经抄本，其历史可以追溯到公元前3世纪到公元1世纪。这些在死海沿岸洞穴中发现的古卷，为我们研究古代希伯来语和早期犹太教提供了无与伦比的宝贵资料。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-elaboration-definition (定义解释逻辑)",
+      "signal_words": [":"],
+      "oneLiner": "冒号后面的内容，是前面空格词的定义",
+      "challenge": "准确理解“the only one”所对应的同义词。"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构与逻辑",
+        "strategy_expert": "冒号清晰地表明，后半句 `it is the only Hebrew verse written by a woman` 是对前半句 `probably ___` 的解释和定义。",
+        "thought_process_os": "又是冒号解释题！后面说这是“唯一一首由女性创作的希伯来诗歌”，那空格里肯定就是“唯一的”、“独一无二的”这类词。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找与“唯一的”（the only）意思相同的词。",
+        "thought_process_os": "A. singular: 独一无二的，非凡的。完美匹配。\nB. unique: 独一无二的。完美匹配。\nC. archaic: 古老的。无关。\nD. counterfeit: 伪造的。无关。\nE. valuable: 有价值的。虽然“唯一”的东西通常“有价值”，但“有价值”不是“唯一”的同义词，属于过度推理。\nF. fake: 伪造的。和 counterfeit 是同义词，无关。\n结论: A 和 B 是同义词，都表示“独一无二的”，符合逻辑，因此是正确答案。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. singular",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`singular` 意为“独一无二的，非凡的”。**它直接对应了冒号后“the only...verse”的定义**，是 `unique` 的完美同义词。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "B. unique",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`unique` 意为“独一无二的”。**它精准地概括了“the only Hebrew verse written by a woman”这一事实**，是本题最直接的答案。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "C. archaic",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** 虽然这首诗可能是古老的，但“唯一的”这个核心信息指向的是其独特性，而非年代。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "D. counterfeit",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** “伪造的”与题干信息完全无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "E. valuable",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个过度推理的选项。** 虽然独一无二的东西通常很有价值，但“有价值”是其独特性可能带来的结果，而不是对其独特性的直接描述。题干的冒号要求的是同义解释，而非因果推断。",
+          "trap_types": ["Over-Inference / Speculation"]
+        }
+      },
+      {
+        "option": "F. fake",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** “假的”与题干信息完全无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "The reconstruct known work is beautiful and also probably singular/unique: it is the only Hebrew verse written by a woman.",
+    "translation": "这件被重构的已知作品很美，并且可能也是独一无二的：它是唯一一首由女性创作的希伯来诗歌。",
+    "grammaticalAnalysis": {
+      "translation_notes": null,
+      "breakdown_hierarchical": [
+        "主句: `The...work is beautiful and also probably singular/unique`",
+        "解释部分 (冒号后): `it is the only Hebrew verse written by a woman.`",
+        "  `it` 指代前半句的 `work`。",
+        "  `written by a woman` 是过去分词短语作后置定语，修饰 `verse`。"
+      ],
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"The work is...\\\"] --> B[\\\"beautiful\\\"];\\n    A -- \\\"and also\\\" --> C[\\\"probably singular/unique\\\"];\\n    C -- \\\"Why? (冒号)\\\" --> D[\\\"It is the only Hebrew verse...\\\"];\\n    D -- \\\"written by\\\" --> E[\\\"a woman\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20250921_reconstruct",
+      "word": "reconstruct",
+      "version": 1.0,
+      "phonetic": "[ˌriːkənˈstrʌkt]",
+      "definition_cn": "v. 重建，重现",
+      "etymology": {
+        "deconstruction": "re- (again, 再次) + construct (建造)",
+        "constructive_essence": "**“再次建造”，即重建。**"
+      },
+      "cognates": [
+        { "word": "construct", "definition_cn": "建造" },
+        { "word": "structure", "definition_cn": "结构" }
+      ],
+      "example": {
+        "sentence": "They are trying to reconstruct the city after the earthquake.",
+        "translation_cn": "他们正在努力重建震后的城市。"
+      }
+    },
+    {
+      "uuid": "v_20250921_verse",
+      "word": "verse",
+      "version": 1.0,
+      "phonetic": "[vɜːs]",
+      "definition_cn": "n. 诗，韵文",
+      "etymology": {
+        "deconstruction": "源于拉丁语 `versus`，意为“a turn of the plow, a line of writing”（犁的转向，一行文字）。",
+        "constructive_essence": "**从犁地时的一行引申为书写的一行，最终特指诗歌的一行或诗歌本身。**"
+      },
+      "cognates": [
+        { "word": "version", "definition_cn": "版本" },
+        { "word": "reverse", "definition_cn": "颠倒" }
+      ],
+      "example": {
+        "sentence": "He quoted a verse from the Bible.",
+        "translation_cn": "他引用了《圣经》中的一节。"
+      }
+    },
+    {
+      "uuid": "v_20250921_singular",
+      "word": "singular",
+      "version": 1.0,
+      "phonetic": "[ˈsɪŋɡjələ(r)]",
+      "definition_cn": "adj. 单一的；非凡的，独一无二的",
+      "etymology": {
+        "deconstruction": "`singulus` (single, 单一的)",
+        "constructive_essence": "**从“单一的”引申为因其独一而显得“非凡的”。**"
+      },
+      "cognates": [
+        { "word": "single", "definition_cn": "单一的" }
+      ],
+      "example": {
+        "sentence": "She has a singular talent for music.",
+        "translation_cn": "她有非凡的音乐天赋。"
+      }
+    },
+    {
+      "uuid": "v_20250921_unique",
+      "word": "unique",
+      "version": 1.0,
+      "phonetic": "[juˈniːk]",
+      "definition_cn": "adj. 独一无二的",
+      "etymology": {
+        "deconstruction": "`unus` (one, 一) + -icus (形容词后缀)",
+        "constructive_essence": "**指“只有一个”的。**"
+      },
+      "cognates": [
+        { "word": "unit", "definition_cn": "单位" },
+        { "word": "union", "definition_cn": "联合" }
+      ],
+      "example": {
+        "sentence": "This is a unique opportunity to study abroad.",
+        "translation_cn": "这是一个独一无二的出国留学的机会。"
+      }
+    },
+    {
+      "uuid": "v_20250921_archaic",
+      "word": "archaic",
+      "version": 1.0,
+      "phonetic": "[ɑːˈkeɪɪk]",
+      "definition_cn": "adj. 古老的，古体的",
+      "etymology": {
+        "deconstruction": "`arkhaios` (ancient, 古老的)，源于 `arkhe` (beginning, 开端)",
+        "constructive_essence": "**指属于“开端”或早期时代的，即古老的。**"
+      },
+      "cognates": [
+        { "word": "archaeology", "definition_cn": "考古学" },
+        { "word": "archive", "definition_cn": "档案" }
+      ],
+      "example": {
+        "sentence": "The book is filled with archaic language.",
+        "translation_cn": "这本书里充满了古雅的语言。"
+      }
+    },
+    {
+      "uuid": "v_20250921_counterfeit",
+      "word": "counterfeit",
+      "version": 1.0,
+      "phonetic": "[ˈkaʊntəfɪt]",
+      "definition_cn": "adj. 伪造的 v. 伪造",
+      "etymology": {
+        "deconstruction": "`contre-` (against, 相对) + `faire` (to make, 制作)",
+        "constructive_essence": "**“对着（真品）制作”，即仿造、伪造。**"
+      },
+      "cognates": [
+        { "word": "affair", "definition_cn": "事件" },
+        { "word": "fact", "definition_cn": "事实" }
+      ],
+      "example": {
+        "sentence": "The police seized a large amount of counterfeit currency.",
+        "translation_cn": "警方查获了大量伪钞。"
+      }
+    },
+    {
+      "uuid": "v_20250921_valuable",
+      "word": "valuable",
+      "version": 1.0,
+      "phonetic": "[ˈvæljuəbl]",
+      "definition_cn": "adj. 有价值的，贵重的",
+      "etymology": {
+        "deconstruction": "value (价值) + -able (能够)",
+        "constructive_essence": "**能够有价值的。**"
+      },
+      "cognates": [
+        { "word": "value", "definition_cn": "价值" },
+        { "word": "evaluate", "definition_cn": "评估" }
+      ],
+      "example": {
+        "sentence": "This antique vase is extremely valuable.",
+        "translation_cn": "这个古董花瓶非常贵重。"
+      }
+    },
+    {
+      "uuid": "v_20250921_fake",
+      "word": "fake",
+      "version": 1.0,
+      "phonetic": "[feɪk]",
+      "definition_cn": "adj. 假的 n. 赝品",
+      "etymology": {
+        "deconstruction": "可能源于德语 `fegen` (to sweep, to polish, 擦亮)，指把假货擦亮了当真货卖。",
+        "constructive_essence": "**指为了欺骗而制作的仿冒品。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "He was wearing a fake Rolex watch.",
+        "translation_cn": "他戴着一块假的劳力士手表。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "uuid": "q_s1t1s1q4_scientificapproach",
+  "source_id": "Stage 1 Test 1 Section 1-4",
+  "version": 10.0,
+  "createdAt": "2025-09-21T08:37:00.000Z",
+  "updatedAt": "2025-09-21T08:37:00.000Z",
+  "difficulty": {
+    "level": "Medium",
+    "score": 5.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "中"
+    }
+  },
+  "questionText": "The beauty of the scientific approach is that even when individual researchers do _________ bias or partiality, others can correct them using a framework of evidence on which everyone broadly agrees.",
+  "options": [
+    { "choice": "A", "text": "overreact to" },
+    { "choice": "B", "text": "deviate from" },
+    { "choice": "C", "text": "succumb to" },
+    { "choice": "D", "text": "recoil from" },
+    { "choice": "E", "text": "yield to" },
+    { "choice": "F", "text": "shrink from" }
+  ],
+  "correctAnswer": "C, E",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦科学方法 (The Scientific Method)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "**可证伪性**: 20世纪的科学哲学家卡尔·波普尔提出，一个理论的科学性不在于它能否被证实，而在于它是否具有“可证伪性”（Falsifiability）。即，理论必须能够做出可能被实验或观察推翻的预测。例如，“所有天鹅都是白色的”是一个科学的陈述，因为只要找到一只黑天鹅就可以推翻它。",
+        "**奥卡姆剃刀**: 这是一个被科学家广泛应用的思维原则，即“如无必要，勿增实体”（Entities should not be multiplied without necessity）。当有两个或多个理论都能解释同一个现象时，我们应该选择那个最简单的、假设最少的理论。",
+        "**双盲实验**: 为了最大限度地排除偏见（bias），尤其是在医学研究中，科学家们发明了“双盲实验”。在这种实验中，研究人员和受试者都不知道谁接受了真正的治疗，谁接受了安慰剂，从而避免了期望效应对实验结果的干扰。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "contrast-concession (让步转折逻辑)",
+      "signal_words": ["even when..."],
+      "oneLiner": "即使研究者会犯错，科学体系也能纠正错误",
+      "challenge": "理解 `even when` 引导的让步关系，并找到一个动词来描述研究者“陷入”或“屈服于”偏见。"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构与逻辑",
+        "strategy_expert": "`even when` 引导一个让步状语从句，描述了一种负面情况的发生。主句 `others can correct them...` 则描述了一个积极的结果。整个句子的意思是：科学方法的美妙之处在于，**即使**研究者发生了（负面的）情况，科学共同体这个大体系也**能**纠正他们。",
+        "thought_process_os": "句子的意思是，就算科学家个人犯了错，科学这个系统也能把他拉回来。那科学家犯了什么错呢？空格后面是 `bias or partiality`（偏见或不公）。所以空格里要填一个词，表示科学家“没顶住”、“陷入了”偏见。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找与“陷入”、“屈服于”意思相近的动词词组。",
+        "thought_process_os": "A. overreact to: 对...反应过度。意思不对。\nB. deviate from: 偏离。听起来不错，但“偏离偏见”意思就反了。\nC. succumb to: 屈服于。完美！“屈服于偏见”。\nD. recoil from: 从...退缩。这是“回避偏见”，意思反了。\nE. yield to: 屈服于。和 `succumb to` 是同义词，完美！\nF. shrink from: 从...退缩。和 `recoil from` 类似，意思反了。\n结论: C 和 E 是同义词，都表示“屈服于”，符合逻辑，因此是正确答案。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. overreact to",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** “对偏见反应过度”与句子的核心逻辑——研究者自身产生偏见——不符。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "B. deviate from",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** “偏离偏见”恰恰是科学家应该做的，但这与 `even when` 引导的负面情况相悖。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "C. succumb to",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`succumb to` 意为“屈服于，抵挡不住”。**“屈服于偏见”准确地描述了研究者未能保持客观的负面情况**，与后文的纠正机制形成完美的让步转折关系。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "D. recoil from",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** “从偏见中退缩”是一种积极的行为，与 `even when` 所要求的负面让步条件相反。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "E. yield to",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`yield to` 意为“屈服于，让步于”。它与 `succumb to` 是近义词，**同样准确地表达了研究者被偏见所影响的状态。**",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "F. shrink from",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** “回避偏见”是一种值得称赞的行为，不符合 `even when` 引导的让步逻辑。",
+          "trap_types": ["Logic Reversal"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "The beauty of the scientific approach is that even when individual researchers do succumb to (or yield to) bias or partiality, others can correct them using a framework of evidence on which everyone broadly agrees.",
+    "translation": "科学方法之美在于，即使个别研究人员确实屈服于偏见或不公，其他人也可以使用一个大家都广泛认同的证据框架来纠正他们。",
+    "grammaticalAnalysis": {
+      "translation_notes": "`do` 在这里是助动词，用于强调，翻译时可以加强语气，如“确实”、“的确”。",
+      "breakdown_hierarchical": [
+        "主句: `The beauty... is that...`",
+        "  `that` 引导一个表语从句，解释 `The beauty` 的内容。",
+        "表语从句内部: `even when individual researchers..., others can correct them...`",
+        "  `even when` 引导让步状语从句。",
+        "  `others can correct them` 是主句。",
+        "  `using a framework of evidence...` 是现在分词短语作方式状语。",
+        "  `on which everyone broadly agrees` 是定语从句，修饰 `framework of evidence`。"
+      ],
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"The beauty of science is...\\\"] --> B[\\\"that... (表语从句)\\\"];\\n    B -- \\\"包含\\\" --> C{\\\"让步状语从句 (even when)\\\"};\\n    C --> D[\\\"Researchers succumb to bias\\\"];\\n    B -- \\\"和\\\" --> E[\\\"主句\\\"];\\n    E --> F[\\\"Others can correct them\\\"];\\n    F -- \\\"using\\\" --> G[\\\"a framework of evidence\\\"];\\n    G -- \\\"on which\\\" --> H[\\\"everyone agrees\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20250921_scientific",
+      "word": "scientific",
+      "version": 1.0,
+      "phonetic": "[ˌsaɪənˈtɪfɪk]",
+      "definition_cn": "adj. 科学的",
+      "etymology": {
+        "deconstruction": "`scientia` (knowledge, 知识) + -fic (making, 制造)",
+        "constructive_essence": "**指与创造或获取系统性知识（science）有关的。**"
+      },
+      "cognates": [
+        { "word": "science", "definition_cn": "科学" },
+        { "word": "conscience", "definition_cn": "良知" }
+      ],
+      "example": {
+        "sentence": "We need a scientific approach to solve this problem.",
+        "translation_cn": "我们需要用科学的方法来解决这个问题。"
+      }
+    },
+    {
+      "uuid": "v_20250921_bias",
+      "word": "bias",
+      "version": 1.0,
+      "phonetic": "[ˈbaɪəs]",
+      "definition_cn": "n. 偏见，偏爱",
+      "etymology": {
+        "deconstruction": "源于古法语 `biais`，意为“斜的，倾斜的”。",
+        "constructive_essence": "**指思维或判断上的“倾斜”，即不公正的偏好或偏见。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "The news report showed a clear bias towards the government.",
+        "translation_cn": "这篇新闻报道显示出对政府的明显偏袒。"
+      }
+    },
+    {
+      "uuid": "v_20250921_partiality",
+      "word": "partiality",
+      "version": 1.0,
+      "phonetic": "[ˌpɑːʃiˈæləti]",
+      "definition_cn": "n. 偏袒，不公平",
+      "etymology": {
+        "deconstruction": "partial (部分的，偏袒的) + -ity (名词后缀)",
+        "constructive_essence": "**指只站在“部分”（part）立场上的行为，即偏袒。**"
+      },
+      "cognates": [
+        { "word": "part", "definition_cn": "部分" },
+        { "word": "partial", "definition_cn": "部分的，偏袒的" }
+      ],
+      "example": {
+        "sentence": "He was accused of partiality towards his own team.",
+        "translation_cn": "他被指控偏袒自己的队伍。"
+      }
+    },
+    {
+      "uuid": "v_20250921_framework",
+      "word": "framework",
+      "version": 1.0,
+      "phonetic": "[ˈfreɪmwɜːk]",
+      "definition_cn": "n. 框架，体系",
+      "etymology": {
+        "deconstruction": "frame (框架) + work (作品)",
+        "constructive_essence": "**构词逻辑较直接，无需额外阐述。**"
+      },
+      "cognates": [
+        { "word": "frame", "definition_cn": "n. 框架 v. 陷害" }
+      ],
+      "example": {
+        "sentence": "The book provides a framework for understanding modern politics.",
+        "translation_cn": "这本书为理解现代政治提供了一个框架。"
+      }
+    },
+    {
+      "uuid": "v_20250921_overreact_to",
+      "word": "overreact to",
+      "version": 1.0,
+      "phonetic": "[ˌəʊvəriˈækt tu]",
+      "definition_cn": "v. 对...反应过度",
+      "etymology": {
+        "deconstruction": "over- (过度) + react (反应) + to (对)",
+        "constructive_essence": "**构词逻辑较直接，无需额外阐述。**"
+      },
+      "cognates": [
+        { "word": "react", "definition_cn": "反应" },
+        { "word": "action", "definition_cn": "行动" }
+      ],
+      "example": {
+        "sentence": "Don't overreact to his criticism; he's just trying to help.",
+        "translation_cn": "别对他的批评反应过度，他只是想帮忙。"
+      }
+    },
+    {
+      "uuid": "v_20250921_deviate_from",
+      "word": "deviate from",
+      "version": 1.0,
+      "phonetic": "[ˈdiːvieɪt frəm]",
+      "definition_cn": "v. 偏离，背离",
+      "etymology": {
+        "deconstruction": "de- (away from, 离开) + `via` (way, 道路) + -ate",
+        "constructive_essence": "**指“离开（de-）正道（via）”，即偏离。**"
+      },
+      "cognates": [
+        { "word": "via", "definition_cn": "经由" },
+        { "word": "obvious", "definition_cn": "明显的" }
+      ],
+      "example": {
+        "sentence": "The plane had to deviate from its normal flight path.",
+        "translation_cn": "飞机不得不偏离其正常航线。"
+      }
+    },
+    {
+      "uuid": "v_20250921_succumb_to",
+      "word": "succumb to",
+      "version": 1.0,
+      "phonetic": "[səˈkʌm tu]",
+      "definition_cn": "v. 屈服于，死于",
+      "etymology": {
+        "deconstruction": "sub- (under, 在...之下) + `cumbere` (to lie, 躺下)",
+        "constructive_essence": "**“躺倒在...之下”，形象地表示因无法抵抗而屈服或死亡。**"
+      },
+      "cognates": [
+        { "word": "incumbent", "definition_cn": "在职者" }
+      ],
+      "example": {
+        "sentence": "He finally succumbed to his injuries.",
+        "translation_cn": "他最终因伤势过重而死亡。"
+      }
+    },
+    {
+      "uuid": "v_20250921_recoil_from",
+      "word": "recoil from",
+      "version": 1.0,
+      "phonetic": "[rɪˈkɔɪl frəm]",
+      "definition_cn": "v. 从...退缩，畏缩",
+      "etymology": {
+        "deconstruction": "re- (back, 向后) + `culus` (backside, 臀部)",
+        "constructive_essence": "**一个非常生动的词，原指因惊吓或厌恶而后坐，屁股向后退，引申为“退缩”。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "She recoiled from the snake in horror.",
+        "translation_cn": "她惊恐地从蛇面前退缩。"
+      }
+    },
+    {
+      "uuid": "v_20250921_yield_to",
+      "word": "yield to",
+      "version": 1.0,
+      "phonetic": "[jiːld tu]",
+      "definition_cn": "v. 屈服于，让步于",
+      "etymology": {
+        "deconstruction": "源于古英语 `gieldan`，意为“支付，偿还”。",
+        "constructive_essence": "**从“支付”债务或贡品，引申为向压力或权威“让步”或“屈服”。**"
+      },
+      "cognates": [
+        { "word": "yield", "definition_cn": "n. 产量 v. 产生，屈服" }
+      ],
+      "example": {
+        "sentence": "The government refused to yield to the terrorists' demands.",
+        "translation_cn": "政府拒绝向恐怖分子的要求屈服。"
+      }
+    },
+    {
+      "uuid": "v_20250921_shrink_from",
+      "word": "shrink from",
+      "version": 1.0,
+      "phonetic": "[ʃrɪŋk frəm]",
+      "definition_cn": "v. 回避，畏缩",
+      "etymology": {
+        "deconstruction": "shrink (收缩) + from (从)",
+        "constructive_essence": "**构词逻辑较直接，无需额外阐述。**"
+      },
+      "cognates": [
+        { "word": "shrink", "definition_cn": "v. 收缩" }
+      ],
+      "example": {
+        "sentence": "He doesn't shrink from his responsibilities.",
+        "translation_cn": "他没有回避自己的责任。"
+      }
+    }
+  ]
+}

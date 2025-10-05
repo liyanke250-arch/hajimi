@@ -1,0 +1,286 @@
+{
+  "uuid": "q_s1t1s1q6_overstatement",
+  "source_id": "Stage 1 Test 1 Section 1-6",
+  "version": 10.0,
+  "createdAt": "2025-09-21T08:44:00.000Z",
+  "updatedAt": "2025-09-21T08:44:00.000Z",
+  "difficulty": {
+    "level": "Easy",
+    "score": 2.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "低"
+    }
+  },
+  "questionText": "In a book that inclines to _________, an epilogue arguing that ballet is dead arrives simply as one more overstatement.",
+  "options": [
+    { "choice": "A", "text": "pessimism" },
+    { "choice": "B", "text": "misinterpretation" },
+    { "choice": "C", "text": "imprecision" },
+    { "choice": "D", "text": "vagueness" },
+    { "choice": "E", "text": "exaggeration" },
+    { "choice": "F", "text": "hyperbole" }
+  ],
+  "correctAnswer": "E, F",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦芭蕾 (Ballet)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "**芭蕾的意大利起源**: 尽管我们通常将芭蕾与法国和俄罗斯联系在一起，但它的起源可以追溯到15世纪的意大利文艺复兴时期的宫廷。最初，它是一种集舞蹈、音乐、诗歌和戏剧于一体的宫廷娱乐活动，后来由意大利贵族凯瑟琳·德·美第奇嫁给法国国王亨利二世时传入法国。",
+        "**“太阳王”与芭蕾的专业化**: 法国国王路易十四是一位狂热的舞蹈爱好者，他亲自出演了许多芭蕾舞剧，其最著名的角色是“太阳王阿波罗”，这个昵称也伴随了他一生。1661年，他创立了世界上第一所专业舞蹈院校——皇家舞蹈学院，标志着芭蕾开始从宫廷娱乐向一门专业艺术转变。",
+        "**足尖鞋的革命**: 19世纪浪漫主义时期，足尖鞋（pointe shoes）的出现是芭蕾史上的一次重大革命。它使得女舞者能够踮起脚尖跳舞，营造出一种轻盈、飘逸、如仙女般的空灵感，极大地增强了芭蕾的艺术表现力。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-elaboration-definition (定义解释逻辑)",
+      "signal_words": ["冒号的隐含用法"],
+      "oneLiner": "书的整体风格，决定了结尾只是又一个例子",
+      "challenge": "识别出 `one more overstatement` 是对全书风格的总结，并找到 `overstatement` 的同义词。"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构与逻辑",
+        "strategy_expert": "句子的核心结构是“在一本倾向于 ___ 的书中，一个...的结语只不过是又一个 `overstatement`”。这表明，这个结语的特点（`overstatement`）与这本书的整体倾向（空格）是一致的。因此，空格处需要填入 `overstatement`（夸大其词）的同义词。",
+        "thought_process_os": "这句话的意思是，一本本来就爱吹牛的书，最后说“芭蕾已死”这种话，也只不过是它吹的又一个牛而已。所以，这本书的风格就是“吹牛”、“夸大”。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找与 `overstatement`（夸大其词）意思相同的词。",
+        "thought_process_os": "A. pessimism: 悲观主义。虽然“芭蕾已死”很悲观，但 `overstatement` 强调的是表述方式，而非情感态度。\nB. misinterpretation: 误解。无关。\nC. imprecision: 不精确。`overstatement` 是一种特定的不精确，但“不精确”本身范围太广。\nD. vagueness: 模糊。同上，范围太广。\nE. exaggeration: 夸张。`overstatement` 的完美同义词。\nF. hyperbole: 夸张法。`overstatement` 的完美同义词，也是一种修辞手法。\n结论: E 和 F 是同义词，都表示“夸大”，符合逻辑，因此是正确答案。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. pessimism",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个焦点偏移的选项。** “悲观主义”描述的是书的内容或观点的情感色彩，而 `overstatement` 描述的是其“表述方式”。虽然“芭蕾已死”是悲观的，但它更是夸大的。",
+          "trap_types": ["Focus Shift"]
+        }
+      },
+      {
+        "option": "B. misinterpretation",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** “误解”与“夸大”没有直接联系。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "C. imprecision",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个相关但不精确的选项。** 夸大（overstatement）确实是一种不精确，但“不精确”是一个非常宽泛的概念，而“夸大”则是一种特定类型的不精确。`exaggeration/hyperbole` 是更精确的同义词。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "D. vagueness",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个相关但不精确的选项。** 理由同 C，`vagueness`（模糊）不等于 `overstatement`（夸大）。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "E. exaggeration",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`exaggeration` 意为“夸张，夸大”。**它完美地对应了 `overstatement` 的核心词义**，指出了这本书一贯的风格。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "F. hyperbole",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`hyperbole` 意为“夸张法”，是 `exaggeration` 的修辞学术语。**它同样完美地对应了 `overstatement` 的核心词义。**",
+          "trap_types": null
+        }
+      }
+    ],
+    "sentenceWithAnswer": "In a book that inclines to exaggeration/hyperbole, an epilogue arguing that ballet is dead arrives simply as one more overstatement.",
+    "translation": "在一本倾向于夸大其词的书中，一篇声称芭蕾已死的跋文，只不过是又一个夸张的说法而已。",
+    "grammaticalAnalysis": {
+      "translation_notes": null,
+      "breakdown_hierarchical": [
+        "`In a book that inclines to...` 是介词短语作状语，修饰整个主句。",
+        "  `that inclines to...` 是定语从句，修饰 `book`。",
+        "主句: `an epilogue... arrives simply as one more overstatement`",
+        "  主语: `an epilogue arguing that ballet is dead`",
+        "    `arguing that...` 是现在分词短语作后置定语，修饰 `epilogue`。"
+      ],
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"In a book...\\\"] --> B[\\\"(book) that inclines to exaggeration/hyperbole\\\"];\\n    A -- \\\"状语修饰\\\" --> C[\\\"an epilogue... arrives as...\\\"];\\n    C -- \\\"主语\\\" --> D[\\\"epilogue\\\"];\\n    D -- \\\"arguing that\\\" --> E[\\\"ballet is dead\\\"];\\n    C -- \\\"表语\\\" --> F[\\\"one more overstatement\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20250921_incline",
+      "word": "incline",
+      "version": 1.0,
+      "phonetic": "[ɪnˈklaɪn]",
+      "definition_cn": "v. 倾向于，倾斜",
+      "etymology": {
+        "deconstruction": "in- (towards, 向) + `clinare` (to bend, 弯曲)",
+        "constructive_essence": "**“向...弯曲”，引申为思想或态度的“倾向”。**"
+      },
+      "cognates": [
+        { "word": "decline", "definition_cn": "下降，拒绝" },
+        { "word": "recline", "definition_cn": "斜倚" }
+      ],
+      "example": {
+        "sentence": "I incline to the view that we should proceed with caution.",
+        "translation_cn": "我倾向于我们应该谨慎行事的观点。"
+      }
+    },
+    {
+      "uuid": "v_20250921_epilogue",
+      "word": "epilogue",
+      "version": 1.0,
+      "phonetic": "[ˈepɪlɒɡ]",
+      "definition_cn": "n. 跋，后记，收场白",
+      "etymology": {
+        "deconstruction": "epi- (in addition, 附加) + logos (speech, word, 言语)",
+        "constructive_essence": "**在（书或戏剧）主要“言语”之后“附加”的部分。**"
+      },
+      "cognates": [
+        { "word": "prologue", "definition_cn": "开场白" },
+        { "word": "logic", "definition_cn": "逻辑" }
+      ],
+      "example": {
+        "sentence": "The book ends with a brief epilogue.",
+        "translation_cn": "这本书以一段简短的后记结尾。"
+      }
+    },
+    {
+      "uuid": "v_20250921_overstatement",
+      "word": "overstatement",
+      "version": 1.0,
+      "phonetic": "[ˌəʊvəˈsteɪtmənt]",
+      "definition_cn": "n. 夸大其词的说法",
+      "etymology": {
+        "deconstruction": "over- (过度) + state (陈述) + -ment (名词后缀)",
+        "constructive_essence": "**“过度的陈述”，即夸张。**"
+      },
+      "cognates": [
+        { "word": "state", "definition_cn": "陈述" },
+        { "word": "statement", "definition_cn": "声明" }
+      ],
+      "example": {
+        "sentence": "To say it was the worst movie ever is an overstatement.",
+        "translation_cn": "说这是有史以来最糟糕的电影有点夸张了。"
+      }
+    },
+    {
+      "uuid": "v_20250921_pessimism",
+      "word": "pessimism",
+      "version": 1.0,
+      "phonetic": "[ˈpesɪmɪzəm]",
+      "definition_cn": "n. 悲观主义",
+      "etymology": {
+        "deconstruction": "`pessimus` (worst, 最坏的) + -ism (主义)",
+        "constructive_essence": "**总往“最坏”处想的“主义”。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "A wave of pessimism swept through the country.",
+        "translation_cn": "一股悲观情绪席卷全国。"
+      }
+    },
+    {
+      "uuid": "v_20250921_misinterpretation",
+      "word": "misinterpretation",
+      "version": 1.0,
+      "phonetic": "[ˌmɪsɪnˌtɜːprɪˈteɪʃn]",
+      "definition_cn": "n. 误解，曲解",
+      "etymology": {
+        "deconstruction": "mis- (wrong, 错误) + interpretation (解释)",
+        "constructive_essence": "**“错误的解释”。**"
+      },
+      "cognates": [
+        { "word": "interpret", "definition_cn": "解释" },
+        { "word": "pretend", "definition_cn": "假装" }
+      ],
+      "example": {
+        "sentence": "His comments were a gross misinterpretation of the facts.",
+        "translation_cn": "他的评论是对事实的严重曲解。"
+      }
+    },
+    {
+      "uuid": "v_20250921_imprecision",
+      "word": "imprecision",
+      "version": 1.0,
+      "phonetic": "[ˌɪmprɪˈsɪʒn]",
+      "definition_cn": "n. 不精确，不严密",
+      "etymology": {
+        "deconstruction": "im- (not, 不) + precision (精确)",
+        "constructive_essence": "**“不精确”。**"
+      },
+      "cognates": [
+        { "word": "precise", "definition_cn": "精确的" }
+      ],
+      "example": {
+        "sentence": "The imprecision of the measurements made the results unreliable.",
+        "translation_cn": "测量的不精确使得结果不可靠。"
+      }
+    },
+    {
+      "uuid": "v_20250921_vagueness",
+      "word": "vagueness",
+      "version": 1.0,
+      "phonetic": "[ˈveɪɡnəs]",
+      "definition_cn": "n. 模糊，含糊",
+      "etymology": {
+        "deconstruction": "`vagus` (wandering, 漫游的) + -ness (名词后缀)",
+        "constructive_essence": "**指言语或思想像“漫游”一样没有焦点，即模糊。**"
+      },
+      "cognates": [
+        { "word": "vague", "definition_cn": "模糊的" },
+        { "word": "extravagant", "definition_cn": "奢侈的 (漫游出界限的)" }
+      ],
+      "example": {
+        "sentence": "I was frustrated by the vagueness of his instructions.",
+        "translation_cn": "我对他的指示含糊不清感到沮丧。"
+      }
+    },
+    {
+      "uuid": "v_20250921_exaggeration",
+      "word": "exaggeration",
+      "version": 1.0,
+      "phonetic": "[ɪɡˌzædʒəˈreɪʃn]",
+      "definition_cn": "n. 夸张，夸大",
+      "etymology": {
+        "deconstruction": "ex- (out) + `agger` (heap, 堆) + -ation",
+        "constructive_essence": "**“向外堆积”成一个大堆，引申为把小事说大，即夸张。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "It would be an exaggeration to say that he is a genius.",
+        "translation_cn": "说他是天才是夸大其词。"
+      }
+    },
+    {
+      "uuid": "v_20250921_hyperbole",
+      "word": "hyperbole",
+      "version": 1.0,
+      "phonetic": "[haɪˈpɜːbəli]",
+      "definition_cn": "n. 夸张法",
+      "etymology": {
+        "deconstruction": "hyper- (over, 超越) + `bole` (a throw, 投掷)",
+        "constructive_essence": "**“投掷得超越（正常范围）”，指一种言过其实的修辞手法。**"
+      },
+      "cognates": [
+        { "word": "hyperactive", "definition_cn": "极度活跃的" },
+        { "word": "problem", "definition_cn": "问题 (向前投掷的东西)" }
+      ],
+      "example": {
+        "sentence": "\"I'm so hungry I could eat a horse\" is an example of hyperbole.",
+        "translation_cn": "“我饿得能吃下一匹马”是夸张法的一个例子。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "uuid": "q_s1t1s1q2_molecularoxygen",
+  "source_id": "Stage 1 Test 1 Section 1-2",
+  "version": 10.0,
+  "createdAt": "2025-09-21T08:22:00.000Z",
+  "updatedAt": "2025-09-21T08:22:00.000Z",
+  "difficulty": {
+    "level": "Medium",
+    "score": 6.0,
+    "factors": {
+      "sentence_complexity": "高",
+      "vocab_rarity": "中",
+      "logic_subtlety": "高"
+    }
+  },
+  "questionText": "The (i)_________ of molecular oxygen on Earth-sized planets around other stars in the universe would not be (ii)_________ sign of life: molecular oxygen can be a signature of photosynthesis (a biotic process) or merely of the rapid escape of water from the upper reaches of a planetary atmosphere (an abiotic process).",
+  "options": [
+    { "choice": "A", "text": "dearth" },
+    { "choice": "B", "text": "presumption" },
+    { "choice": "C", "text": "detection" },
+    { "choice": "D", "text": "a controversial" },
+    { "choice": "E", "text": "an unambiguous" },
+    { "choice": "F", "text": "a possible" }
+  ],
+  "correctAnswer": "C, E",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦分子氧 (Molecular Oxygen)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "**地球大氧化事件**: 在地球早期历史中，大气中几乎没有自由的分子氧。大约24亿年前，蓝藻等微生物通过光合作用大量制造氧气，彻底改变了大气成分，导致了“大氧化事件”（Great Oxidation Event）。这一事件为复杂生命的演化铺平了道路，但也导致了当时许多厌氧生物的大灭绝。",
+        "**三原子氧——臭氧**: 分子氧（O2）最常见的同素异形体是臭氧（O3）。平流层中的臭氧层能吸收大部分来自太阳的有害紫外线辐射，保护着地球上的生命。它的存在，本身就是分子氧在高层大气中与紫外线相互作用的结果。",
+        "**氧气的“毒性”**: 尽管是生命所必需，但高浓度的氧气对生物体也具有毒性。氧气是一种强氧化剂，其代谢过程会产生活性氧（ROS），这些物质会损伤细胞的DNA、蛋白质和脂质。生物体为此进化出了一套复杂的抗氧化系统来应对这种“氧化应激”。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-elaboration-definition (定义解释逻辑)",
+      "signal_words": [":"],
+      "oneLiner": "冒号后面的内容，解释了为什么前面的判断成立",
+      "challenge": "理解冒号后“生命过程”和“非生命过程”均可产生氧气这一核心信息，从而推断出氧气作为生命信号的“不明确性”。"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子核心逻辑",
+        "strategy_expert": "句子的主干是“氧气的(i)不是生命的(ii)信号”。冒号后面的长句解释了原因：氧气既可以来自生命过程（光合作用），也可以来自非生命过程（水逃逸）。",
+        "thought_process_os": "冒号解释，老朋友了。后面说氧气有两个来源，一个是生命（biotic），一个是非生命（abiotic）。这就意味着，你光看到氧气，没法100%确定就有生命。所以，氧气这个信号“不明确”。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "分析第二空 (ii)",
+        "strategy_expert": "根据第一步的分析，我们需要一个词来描述“不明确的”或“不清晰的”。由于句子中有 `not`，所以第二空本身需要填入一个表示“明确的、清晰的”词，与 `not` 结合后才能表达“不明确”的整体意思。",
+        "thought_process_os": "句子是 `would not be (ii)___ sign`，意思就是“不是一个(ii)的信号”。因为氧气来源不纯，所以它“不是一个明确的信号”。所以(ii)要填“明确的”。看选项：D. controversial (有争议的)，E. unambiguous (明确无误的)，F. possible (可能的)。`not unambiguous` 就是“不明确”，完美匹配。"
+      },
+      {
+        "step": 3,
+        "step_name_cn": "分析第一空 (i)",
+        "strategy_expert": "既然我们讨论的是“氧气是不是生命的信号”，那么前提必然是我们在行星上“找到”或“探测到”了氧气。因此，第一空需要一个表示“发现”或“存在”的词。",
+        "thought_process_os": "整个句子都在讨论“探测到”氧气之后该如何判断，所以第一空肯定是“探测”这个动作。看选项：A. dearth (缺乏)，反了。B. presumption (假定)，不对，我们是基于探测，不是假定。C. detection (探测)，完美匹配。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. dearth",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** 如果行星上“缺乏”氧气，那么后续关于它是否是生命信号的讨论就失去了前提。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "B. presumption",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个无关概念的选项。** 科学讨论基于“探测”到的证据，而非主观“假定”的存在。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "C. detection",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "“探测到”氧气是整个逻辑链的起点。**正是因为我们探测到了氧气，才需要进一步判断它是否是生命的信号。**",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "D. a controversial",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个相关但不精确的选项。** 虽然氧气是否是生命信号可能“有争议”，但 `unambiguous`（明确无误的）更能精准地表达其信号性质的“纯粹性”问题。`not unambiguous`（不明确）比 `not controversial`（没有争议）更贴合后文的解释。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "E. an unambiguous",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "“明确无误的”。因为氧气可能来自非生命过程，所以它“不是一个明确无误的生命信号”。**`not unambiguous`（不明确的）完美概括了后文给出的两种可能性。**",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "F. a possible",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** 氧气“是”一个可能的生命信号（来自光合作用），所以 `not a possible sign`（不是一个可能的信号）与原文逻辑相悖。",
+          "trap_types": ["Logic Reversal"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "The detection of molecular oxygen on Earth-sized planets around other stars in the universe would not be an unambiguous sign of life: molecular oxygen can be a signature of photosynthesis (a biotic process) or merely of the rapid escape of water from the upper reaches of a planetary atmosphere (an abiotic process).",
+    "translation": "在宇宙中其他恒星周围的类地行星上探测到分子氧，并不能算作生命明确无误的信号：因为分子氧可能是一种光合作用（一种生命过程）的标志，也可能仅仅是水从行星高层大气快速逃逸（一种非生命过程）的产物。",
+    "grammaticalAnalysis": {
+      "translation_notes": null,
+      "breakdown_hierarchical": [
+        "主句: `The detection... would not be an unambiguous sign of life`",
+        "  主语: `The detection of molecular oxygen on Earth-sized planets around other stars in the universe` (一个由 `detection` 核心名词引导的长名词短语)",
+        "解释部分 (冒号后): `molecular oxygen can be a signature of... or merely of...`",
+        "  `can be... or...` 结构平行地列出了两种可能性。",
+        "  `(a biotic process)` 和 `(an abiotic process)` 是插入语，分别解释 `photosynthesis` 和 `escape of water` 的性质。"
+      ],
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"Detection of O2\\\"] -- \\\"is not\\\" --> B[\\\"an unambiguous sign of life\\\"];\\n    B -- \\\"Why? (冒号)\\\" --> C{\\\"O2 can be a signature of...\\\"};\\n    C --> D[\\\"1. Photosynthesis (biotic)\\\"];\\n    C -- \\\"or\\\" --> E[\\\"2. Water escape (abiotic)\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20250921_detection",
+      "word": "detection",
+      "version": 1.0,
+      "phonetic": "[dɪˈtekʃn]",
+      "definition_cn": "n. 探测，发现",
+      "etymology": {
+        "deconstruction": "de- (off, away, 分离) + `tegere` (to cover, 覆盖)",
+        "constructive_essence": "**字面意思为“揭开覆盖物”，引申为发现或侦测到被隐藏或不明显的事物。**"
+      },
+      "cognates": [
+        { "word": "detect", "definition_cn": "v. 探测" },
+        { "word": "protect", "definition_cn": "保护 (向前覆盖)" }
+      ],
+      "example": {
+        "sentence": "Early detection of the disease is crucial.",
+        "translation_cn": "疾病的早期发现至关重要。"
+      }
+    },
+    {
+      "uuid": "v_20250921_molecular",
+      "word": "molecular",
+      "version": 1.0,
+      "phonetic": "[məˈlekjələ(r)]",
+      "definition_cn": "adj. 分子的",
+      "etymology": {
+        "deconstruction": "molecule (分子) + -ar (形容词后缀)",
+        "constructive_essence": "**与分子（molecule）有关的。**"
+      },
+      "cognates": [
+        { "word": "molecule", "definition_cn": "分子" }
+      ],
+      "example": {
+        "sentence": "He is studying molecular biology.",
+        "translation_cn": "他正在研究分子生物学。"
+      }
+    },
+    {
+      "uuid": "v_20250921_unambiguous",
+      "word": "unambiguous",
+      "version": 1.0,
+      "phonetic": "[ˌʌnæmˈbɪɡjuəs]",
+      "definition_cn": "adj. 明确的，没有歧义的",
+      "etymology": {
+        "deconstruction": "un- (not, 不) + ambiguous (模棱两可的)",
+        "constructive_essence": "**不（un-）模棱两可（ambiguous）的，即清晰明确。**"
+      },
+      "cognates": [
+        { "word": "ambiguous", "definition_cn": "模棱两可的" },
+        { "word": "ambiguity", "definition_cn": "歧义" }
+      ],
+      "example": {
+        "sentence": "The instructions were unambiguous.",
+        "translation_cn": "指示很明确。"
+      }
+    },
+    {
+      "uuid": "v_20250921_signature",
+      "word": "signature",
+      "version": 1.0,
+      "phonetic": "[ˈsɪɡnətʃə(r)]",
+      "definition_cn": "n. 标志，特征；签名",
+      "etymology": {
+        "deconstruction": "`signare` (to sign, 标记)",
+        "constructive_essence": "**指能够代表或识别某人或某物的独特标记（sign）。**"
+      },
+      "cognates": [
+        { "word": "sign", "definition_cn": "标记，信号" },
+        { "word": "design", "definition_cn": "设计" }
+      ],
+      "example": {
+        "sentence": "The chef's signature dish is the roasted duck.",
+        "translation_cn": "这位厨师的招牌菜是烤鸭。"
+      }
+    },
+    {
+      "uuid": "v_20250921_photosynthesis",
+      "word": "photosynthesis",
+      "version": 1.0,
+      "phonetic": "[ˌfəʊtəʊˈsɪnθəsɪs]",
+      "definition_cn": "n. 光合作用",
+      "etymology": {
+        "deconstruction": "photo- (light, 光) + synthesis (to put together, 合成)",
+        "constructive_essence": "**利用光能（photo-）将简单物质合成（synthesis）复杂物质的过程。**"
+      },
+      "cognates": [
+        { "word": "synthesis", "definition_cn": "合成" },
+        { "word": "synthetic", "definition_cn": "合成的" }
+      ],
+      "example": {
+        "sentence": "Photosynthesis in plants converts carbon dioxide into oxygen.",
+        "translation_cn": "植物的光合作用将二氧化碳转化为氧气。"
+      }
+    },
+    {
+      "uuid": "v_20250921_biotic",
+      "word": "biotic",
+      "version": 1.0,
+      "phonetic": "[baɪˈɒtɪk]",
+      "definition_cn": "adj. 生命的，生物的",
+      "etymology": {
+        "deconstruction": "`bios` (life, 生命) + -tic (形容词后缀)",
+        "constructive_essence": "**与生命（bio-）有关的。**"
+      },
+      "cognates": [
+        { "word": "biology", "definition_cn": "生物学" },
+        { "word": "antibiotic", "definition_cn": "抗生素 (对抗生命)" }
+      ],
+      "example": {
+        "sentence": "The biotic components of the ecosystem include plants and animals.",
+        "translation_cn": "该生态系统的生物成分包括植物和动物。"
+      }
+    },
+    {
+      "uuid": "v_20250921_abiotic",
+      "word": "abiotic",
+      "version": 1.0,
+      "phonetic": "[ˌeɪbaɪˈɒtɪk]",
+      "definition_cn": "adj. 非生命的，无生命的",
+      "etymology": {
+        "deconstruction": "a- (not, 非) + biotic (生命的)",
+        "constructive_essence": "**非（a-）生命的。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "Abiotic factors such as sunlight and temperature affect the environment.",
+        "translation_cn": "阳光和温度等非生物因素会影响环境。"
+      }
+    },
+    {
+      "uuid": "v_20250921_dearth",
+      "word": "dearth",
+      "version": 1.0,
+      "phonetic": "[dɜːθ]",
+      "definition_cn": "n. 缺乏，稀少",
+      "etymology": {
+        "deconstruction": "源于古英语 `deore` (dear, 昂贵的，稀有的)",
+        "constructive_essence": "**从“昂贵/稀有”引申为事物的“缺乏”或“不足”。**"
+      },
+      "cognates": [
+        { "word": "dear", "definition_cn": "亲爱的；昂贵的" }
+      ],
+      "example": {
+        "sentence": "There is a dearth of evidence to support his claim.",
+        "translation_cn": "缺乏证据来支持他的说法。"
+      }
+    },
+    {
+      "uuid": "v_20250921_presumption",
+      "word": "presumption",
+      "version": 1.0,
+      "phonetic": "[prɪˈzʌmpʃn]",
+      "definition_cn": "n. 假定，推定；傲慢",
+      "etymology": {
+        "deconstruction": "pre- (before, 在...之前) + `sumere` (to take, 拿取)",
+        "constructive_essence": "**在有证据之前（pre-）就“拿来”或“采纳”一个观点，即假定。**"
+      },
+      "cognates": [
+        { "word": "assume", "definition_cn": "假定" },
+        { "word": "consume", "definition_cn": "消费" }
+      ],
+      "example": {
+        "sentence": "The presumption of innocence is a fundamental principle of law.",
+        "translation_cn": "无罪推定是一项基本的法律原则。"
+      }
+    },
+    {
+      "uuid": "v_20250921_controversial",
+      "word": "controversial",
+      "version": 1.0,
+      "phonetic": "[ˌkɒntrəˈvɜːʃl]",
+      "definition_cn": "adj. 有争议的",
+      "etymology": {
+        "deconstruction": "contra- (against, 反对) + `vertere` (to turn, 转向)",
+        "constructive_essence": "**指引得人们“转向”（vertere）相互“反对”（contra-）的议题。**"
+      },
+      "cognates": [
+        { "word": "controversy", "definition_cn": "争议" },
+        { "word": "convert", "definition_cn": "转变" }
+      ],
+      "example": {
+        "sentence": "The new law is highly controversial.",
+        "translation_cn": "这项新法律极具争议。"
+      }
+    },
+    {
+      "uuid": "v_20250921_possible",
+      "word": "possible",
+      "version": 1.0,
+      "phonetic": "[ˈpɒsəbl]",
+      "definition_cn": "adj. 可能的",
+      "etymology": {
+        "deconstruction": "`posse` (to be able, 能够)",
+        "constructive_essence": "**能够（able）发生的。**"
+      },
+      "cognates": [
+        { "word": "power", "definition_cn": "力量" },
+        { "word": "potential", "definition_cn": "潜能" }
+      ],
+      "example": {
+        "sentence": "It is possible to get there by train.",
+        "translation_cn": "坐火车去那里是可能的。"
+      }
+    }
+  ]
+}

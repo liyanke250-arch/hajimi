@@ -1,0 +1,270 @@
+{
+  "uuid": "q_s1t1s1q7_politicalupheaval",
+  "source_id": "Stage 1 Test 1 Section 1-7",
+  "version": 10.0,
+  "createdAt": "2025-09-21T08:46:00.000Z",
+  "updatedAt": "2025-09-21T08:46:00.000Z",
+  "difficulty": {
+    "level": "Medium",
+    "score": 5.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "中"
+    }
+  },
+  "questionText": "The political upheaval caught most people by surprise: despite the _________ warnings of some commentators, it had never seemed that imminent.",
+  "options": [
+    { "choice": "A", "text": "stern" },
+    { "choice": "B", "text": "prescient" },
+    { "choice": "C", "text": "prophetic" },
+    { "choice": "D", "text": "indifferent" },
+    { "choice": "E", "text": "repeated" },
+    { "choice": "F", "text": "apathetic" }
+  ],
+  "correctAnswer": "B, C",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦政治剧变 (Political Upheaval)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "**“黑天鹅”事件**: 在金融和历史领域，“黑天鹅”事件指那些极其罕见、出乎意料，但在发生后却被认为“本可预料”的重大事件。许多政治剧变，如苏联解体或阿拉伯之春，都具有“黑天鹅”的特征，它们在事前几乎无法预测，但事后却能找到各种解释。",
+        "**法国大革命的预言家**: 尽管大多数人对1789年的法国大革命感到意外，但一些思想家，如卢梭，早已在其著作中预示了旧制度的崩溃。这说明，看似突然的剧变，其根源往往早已深植于社会结构之中，只是未被大众察觉。",
+        "**信息瀑布效应**: 在社会学中，“信息瀑布”（Information Cascade）指人们在决策时，会观察他人的行为并跟随，即使自己的私有信息与大众行为相悖。在政治剧变前夕，即使一些人感到山雨欲来，但如果大多数人表现得若无其事，他们也可能压抑自己的判断，从而导致集体性的“意外”。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "contrast-concession (让步转折逻辑)",
+      "signal_words": ["despite"],
+      "oneLiner": "尽管有一些（什么样的）警告，但大家还是觉得不可能发生",
+      "challenge": "理解 `despite` 引导的让步转折关系，并找到一个词来形容那些“事后被证明是正确的”警告。"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构与逻辑",
+        "strategy_expert": "`despite` 引导一个让步关系。主句是“政治剧变让大多数人感到意外”，并且“它从未显得那么紧迫”。`despite` 后面是“一些评论员的 ___ 警告”。整个逻辑是：尽管有这些警告，但人们仍然感到意外。这说明这些警告是准确的、有先见之明的，只是未被采纳。",
+        "thought_process_os": "句子说，虽然有人警告了，但大家还是吓了一跳。这说明什么？说明这些警告说对了啊！是“先见之明”的警告。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找与“有先见之明的”、“预言性的”意思相同的词。",
+        "thought_process_os": "A. stern: 严厉的。警告可以是严厉的，但“严厉”不等于“准确”。\nB. prescient: 有先见之明的。完美匹配！\nC. prophetic: 预言性的。完美匹配！\nD. indifferent: 漠不关心的。意思反了。\nE. repeated: 重复的。警告可能是重复的，但这不强调其内容的准确性。\nF. apathetic: 冷漠的。和 indifferent 是同义词，意思反了。\n结论: B 和 C 是同义词，都表示“有预见性的”，符合逻辑，因此是正确答案。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. stern",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个相关但不精确的选项。** 警告可以是“严厉的”，但这只描述了警告的语气，而没有描述其内容的准确性。核心逻辑在于警告的“预见性”与大众的“意外”形成对比。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "B. prescient",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`prescient` 意为“有先见之明的，预知的”。**它完美地描述了那些事后被证明是正确的警告**，与大众的“意外”（surprise）形成了鲜明的对比。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "C. prophetic",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "`prophetic` 意为“预言的，有预见的”。它与 `prescient` 是近义词，**同样准确地描述了这些警告的前瞻性和准确性。**",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "D. indifferent",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** “漠不关心的”警告不可能预见到剧变，无法与主句的“意外”构成合理的让步关系。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "E. repeated",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个相关但不精确的选项。** 警告可能是“重复的”，但这并不足以解释为什么它与大众的意外形成对比。核心在于警告的“内容”而非“频率”。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "F. apathetic",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "**这是一个反向逻辑的选项。** 同 D，`apathetic`（冷漠的）警告无法构成合理的逻辑。",
+          "trap_types": ["Logic Reversal"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "The political upheaval caught most people by surprise: despite the prescient/prophetic warnings of some commentators, it had never seemed that imminent.",
+    "translation": "这场政治剧变让大多数人措手不及：尽管一些评论员发出了有先见之明的警告，但它似乎从未显得那么紧迫。",
+    "grammaticalAnalysis": {
+      "translation_notes": "冒号在这里起到了补充说明的作用，解释了“意外”的具体情况。",
+      "breakdown_hierarchical": [
+        "主句: `The political upheaval caught most people by surprise`",
+        "解释部分 (冒号后): `despite the... warnings..., it had never seemed that imminent.`",
+        "  `despite` 引导介词短语作让步状语。",
+        "  `it` 指代 `The political upheaval`。"
+      ],
+      "visual_tree_mermaid": "graph TD;\\n    A[\\\"Political upheaval caught people by surprise\\\"] -- \\\"具体说明(冒号)\\\" --> B{\\\"Despite warnings, it never seemed imminent\\\"};\\n    B -- \\\"让步(Despite)\\\" --> C[\\\"prescient/prophetic warnings\\\"];\\n    B -- \\\"主干\\\" --> D[\\\"It never seemed imminent\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20250921_upheaval",
+      "word": "upheaval",
+      "version": 1.0,
+      "phonetic": "[ʌpˈhiːvl]",
+      "definition_cn": "n. 剧变，动乱",
+      "etymology": {
+        "deconstruction": "up (向上) + heave (举起，抛) + -al",
+        "constructive_essence": "**像被从地底“向上掀翻”一样，指剧烈的、颠覆性的变动。**"
+      },
+      "cognates": [
+        { "word": "heave", "definition_cn": "v. 举起，起伏" },
+        { "word": "heavy", "definition_cn": "重的" }
+      ],
+      "example": {
+        "sentence": "The country is in the midst of a political upheaval.",
+        "translation_cn": "该国正处于一场政治动荡之中。"
+      }
+    },
+    {
+      "uuid": "v_20250921_imminent",
+      "word": "imminent",
+      "version": 1.0,
+      "phonetic": "[ˈɪmɪnənt]",
+      "definition_cn": "adj. 即将发生的，临近的",
+      "etymology": {
+        "deconstruction": "in- (upon, 在...之上) + `minere` (to project, to jut out, 突出)",
+        "constructive_essence": "**像悬崖一样“突出在...之上”，引申为危险或重大事件即将降临。**"
+      },
+      "cognates": [
+        { "word": "prominent", "definition_cn": "杰出的，突出的" },
+        { "word": "menace", "definition_cn": "威胁" }
+      ],
+      "example": {
+        "sentence": "A storm is imminent.",
+        "translation_cn": "暴风雨即将来临。"
+      }
+    },
+    {
+      "uuid": "v_20250921_stern",
+      "word": "stern",
+      "version": 1.0,
+      "phonetic": "[stɜːn]",
+      "definition_cn": "adj. 严厉的，坚定的",
+      "etymology": {
+        "deconstruction": "源于古英语 `styrne`，意为“严格的，严肃的”。",
+        "constructive_essence": "**形容态度、表情或纪律的严格和不容置疑。**"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "He gave me a stern warning.",
+        "translation_cn": "他给了我一个严厉的警告。"
+      }
+    },
+    {
+      "uuid": "v_20250921_prescient",
+      "word": "prescient",
+      "version": 1.0,
+      "phonetic": "[ˈpresiənt]",
+      "definition_cn": "adj. 有先见之明的，预知的",
+      "etymology": {
+        "deconstruction": "pre- (before, 预先) + `scire` (to know, 知道)",
+        "constructive_essence": "**“预先知道”的。**"
+      },
+      "cognates": [
+        { "word": "science", "definition_cn": "科学 (知识)" },
+        { "word": "conscious", "definition_cn": "有意识的" }
+      ],
+      "example": {
+        "sentence": "His prescient warnings about the financial crisis were ignored.",
+        "translation_cn": "他关于金融危机的预见性警告被忽视了。"
+      }
+    },
+    {
+      "uuid": "v_20250921_prophetic",
+      "word": "prophetic",
+      "version": 1.0,
+      "phonetic": "[prəˈfetɪk]",
+      "definition_cn": "adj. 预言的，有预见的",
+      "etymology": {
+        "deconstruction": "pro- (before, 预先) + `phanai` (to speak, 说)",
+        "constructive_essence": "**“预先说出”的，即预言。**"
+      },
+      "cognates": [
+        { "word": "prophet", "definition_cn": "先知" },
+        { "word": "telephone", "definition_cn": "电话" }
+      ],
+      "example": {
+        "sentence": "Her early paintings now seem prophetic.",
+        "translation_cn": "她早期的画作现在看来颇有预见性。"
+      }
+    },
+    {
+      "uuid": "v_20250921_indifferent",
+      "word": "indifferent",
+      "version": 1.0,
+      "phonetic": "[ɪnˈdɪfrənt]",
+      "definition_cn": "adj. 漠不关心的，冷淡的",
+      "etymology": {
+        "deconstruction": "in- (not, 不) + different (不同的)",
+        "constructive_essence": "**对事物“不分出不同”，即对好坏、重要与否都无所谓，引申为冷漠。**"
+      },
+      "cognates": [
+        { "word": "different", "definition_cn": "不同的" },
+        { "word": "differ", "definition_cn": "v. 不同" }
+      ],
+      "example": {
+        "sentence": "He is indifferent to the suffering of others.",
+        "translation_cn": "他对他人的痛苦漠不关心。"
+      }
+    },
+    {
+      "uuid": "v_20250921_repeated",
+      "word": "repeated",
+      "version": 1.0,
+      "phonetic": "[rɪˈpiːtɪd]",
+      "definition_cn": "adj. 重复的，再三的",
+      "etymology": {
+        "deconstruction": "re- (again, 再次) + `petere` (to seek, to go to, 寻求，走向)",
+        "constructive_essence": "**“再次走向”或“再次寻求”，即重复。**"
+      },
+      "cognates": [
+        { "word": "repeat", "definition_cn": "v. 重复" },
+        { "word": "petition", "definition_cn": "请愿" }
+      ],
+      "example": {
+        "sentence": "Despite repeated warnings, he continued to smoke.",
+        "translation_cn": "尽管一再警告，他仍然继续吸烟。"
+      }
+    },
+    {
+      "uuid": "v_20250921_apathetic",
+      "word": "apathetic",
+      "version": 1.0,
+      "phonetic": "[ˌæpəˈθetɪk]",
+      "definition_cn": "adj. 冷漠的，无动于衷的",
+      "etymology": {
+        "deconstruction": "a- (without, 没有) + pathos (feeling, 感情)",
+        "constructive_essence": "**“没有感情”的。**"
+      },
+      "cognates": [
+        { "word": "apathy", "definition_cn": "冷漠" },
+        { "word": "sympathy", "definition_cn": "同情" }
+      ],
+      "example": {
+        "sentence": "The apathetic voters did not bother to show up at the polls.",
+        "translation_cn": "冷漠的选民们懒得去投票站投票。"
+      }
+    }
+  ]
+}
