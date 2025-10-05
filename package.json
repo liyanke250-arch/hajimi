@@ -18,7 +18,8 @@
     "db:seed": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/seed.ts",
     "import:questions": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/importers/question_importer.ts",
     "import:test": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/importers/question_importer.ts ./content/test",
-    "check:setup": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/check-setup.ts"
+    "check:setup": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/check-setup.ts",
+    "clean:json": "ts-node --compiler-options {\\\"module\\\":\\\"CommonJS\\\"} scripts/utils/json-cleaner.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.14.0",

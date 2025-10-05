@@ -63,7 +63,7 @@ export async function getOrCreateVocabulary(vocabData: VocabularyData) {
       vocab = await prisma.vocabulary.update({
         where: { id: vocab.id },
         data: {
-          usageCount: {
+          usage_count: {
             increment: 1  // 使用次数 +1
           }
         }
@@ -84,7 +84,7 @@ export async function getOrCreateVocabulary(vocabData: VocabularyData) {
         cognates: vocabData.cognates || null,
         exampleSentence: vocabData.example?.sentence,
         exampleTranslation: vocabData.example?.translation_cn,
-        usageCount: 1  // 初始使用次数为1
+        usage_count: 1  // 初始使用次数为1
       }
     });
 

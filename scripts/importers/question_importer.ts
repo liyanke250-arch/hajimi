@@ -97,7 +97,6 @@ export async function importQuestion(jsonData: any) {
         uuid: jsonData.uuid,
         sourceId: jsonData.source_id,
         version: jsonData.version || 1.0,
-        questionType: 'TEXT_COMPLETION',  // 默认类型
         questionText: jsonData.questionText,
         correctAnswer: jsonData.correctAnswer,
         

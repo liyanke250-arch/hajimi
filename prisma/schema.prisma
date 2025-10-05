@@ -1,389 +1,153 @@
-// ==========================================
-// Hajimi GRE 题库数据库 Schema - 最终版
-// 设计考虑：
-// 1. 支持超长文本（难题解析、大量词汇）
-// 2. 自动去重和关联
-// 3. 支持所有GRE题型（Verbal, Quant, Reading, Writing）
-// 4. 可扩展至360套完整套题
-// 创建时间: 2025-10-05
-// 版本: 3.0 - Production Ready
-// ==========================================
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
-// ==========================================
-// 枚举类型定义
-// ==========================================
-
-enum QuestionType {
-  // Verbal Reasoning
-  TEXT_COMPLETION          // 填空题（1-3空）
-  SENTENCE_EQUIVALENCE     // 句子等价
-  READING_COMPREHENSION    // 阅读理解
-  
-  // Quantitative Reasoning
-  QUANTITATIVE_COMPARISON  // 数量比较
-  MULTIPLE_CHOICE_ONE      // 单选题
-  MULTIPLE_CHOICE_MULTIPLE // 多选题
-  NUMERIC_ENTRY           // 数值输入
-  
-  // Analytical Writing
-  ISSUE_TASK              // Issue写作
-  ARGUMENT_TASK           // Argument写作
-  
-  @@map("question_type")
-}
-
-enum DifficultyLevel {
-  EASY
-  MEDIUM
-  HARD
-  
-  @@map("difficulty_level")
-}
-
-enum TestType {
-  PRACTICE         // 单题练习
-  SECTION_TEST     // 分节测试
-  FULL_TEST        // 完整模考
-  OFFICIAL_TEST    // 官方真题
-  
-  @@map("test_type")
-}
-
-// ==========================================
-// 核心表1: 题目表 (Questions)
-// 设计要点：
-// - 使用 @db.Text 存储超长内容
-// - questionType 支持所有GRE题型
-// - 通过 testSets 关联支持套题
-// ==========================================
 model Question {
-  id        String   @id @default(cuid())
-  
-  // 业务标识
-  uuid      String   @unique
-  sourceId  String   @map("source_id")
-  version   Float    @default(1.0)
-  
-  // 题目类型（支持所有GRE题型）
-  questionType QuestionType @map("question_type")
-  
-  // 题目内容（使用 @db.Text 支持超长内容）
-  questionText    String   @map("question_text") @db.Text
-  correctAnswer   String   @map("correct_answer")
-  
-  // 阅读理解特殊字段
-  passage         String?  @db.Text  // 阅读文章（可能很长）
-  passageTitle    String?  @map("passage_title")
-  
-  // 数学题特殊字段
-  quantityA       String?  @map("quantity_a") @db.Text
-  quantityB       String?  @map("quantity_b") @db.Text
-  
-  // 写作题特殊字段
-  prompt          String?  @db.Text  // 写作提示
-  
-  // 难度信息
-  difficultyLevel   DifficultyLevel @map("difficulty_level")
-  difficultyScore   Float    @map("difficulty_score")
-  sentenceComplexity String  @map("sentence_complexity")
-  vocabRarity       String   @map("vocab_rarity")
-  logicSubtlety     String   @map("logic_subtlety")
-  
-  // 解析内容（使用 Json 类型，PostgreSQL 支持超大JSON）
-  // PostgreSQL 的 jsonb 类型理论上可存储 1GB 数据
-  analysis  Json  @db.JsonB
-  
-  // 元数据
-  tags      String[]  // 标签数组
-  
-  // 审计字段
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-  
-  // 关联关系
-  options       QuestionOption[]
-  vocabularies  QuestionVocabulary[]
-  testSets      TestSetQuestion[]     // 支持套题
-  userPractices UserPractice[]
-  
+  id                 String               @id @default(cuid())
+  uuid               String               @unique
+  sourceId           String               @map("source_id")
+  version            Float?               @default(1.0)
+  questionText       String               @map("question_text")
+  correctAnswer      String               @map("correct_answer")
+  difficultyLevel    String               @map("difficulty_level")
+  difficultyScore    Float                @map("difficulty_score")
+  sentenceComplexity String               @map("sentence_complexity")
+  vocabRarity        String               @map("vocab_rarity")
+  logicSubtlety      String               @map("logic_subtlety")
+  analysis           Json
+  createdAt          DateTime?            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime?            @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  options            QuestionOption[]
+  vocabularies       QuestionVocabulary[]
+  user_practices     UserPractice[]
+
+  @@index([difficultyLevel], map: "idx_questions_difficulty")
+  @@index([sourceId], map: "idx_questions_source_id")
+  @@index([uuid], map: "idx_questions_uuid")
   @@map("questions")
-  @@index([uuid])
-  @@index([sourceId])
-  @@index([questionType])
-  @@index([difficultyLevel])
 }
 
-// ==========================================
-// 核心表2: 选项表 (Question Options)
-// ==========================================
 model QuestionOption {
-  id         String   @id @default(cuid())
-  questionId String   @map("question_id")
-  
-  choice     String
-  text       String   @db.Text  // 支持长选项
-  isCorrect  Boolean  @map("is_correct")
-  
-  // 选项分析（可能很长）
-  analysisText String?  @map("analysis_text") @db.Text
-  trapTypes    String[] @map("trap_types")
-  
-  // 关联
-  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  
-  createdAt  DateTime @default(now()) @map("created_at")
-  
+  id           String    @id @default(cuid())
+  questionId   String    @map("question_id")
+  choice       String
+  text         String
+  isCorrect    Boolean   @map("is_correct")
+  analysisText String?   @map("analysis_text")
+  trapTypes    String[]  @map("trap_types")
+  createdAt    DateTime? @default(now()) @map("created_at") @db.Timestamptz(6)
+  question     Question  @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
   @@unique([questionId, choice])
+  @@index([questionId], map: "idx_question_options_question_id")
   @@map("question_options")
-  @@index([questionId])
 }
 
-// ==========================================
-// 核心表3: 词汇表 (Vocabularies)
-// 设计要点：
-// - word 字段 UNIQUE 确保全局唯一
-// - 自动去重通过 upsert 实现
-// ==========================================
 model Vocabulary {
-  id       String   @id @default(cuid())
-  
-  // 业务标识
-  uuid     String   @unique
-  word     String   @unique  // 🔑 关键：确保单词唯一，实现自动去重
-  version  Float    @default(1.0)
-  
-  // 基本信息
-  phonetic      String?
-  definitionCn  String   @map("definition_cn") @db.Text
-  
-  // 词源信息（JSON存储）
-  etymology     Json?    @db.JsonB
-  
-  // 同源词（JSON数组）
-  cognates      Json?    @db.JsonB
-  
-  // 例句
-  exampleSentence     String?  @map("example_sentence") @db.Text
-  exampleTranslation  String?  @map("example_translation") @db.Text
-  
-  // 统计信息（自动维护）
-  usageCount    Int      @default(0) @map("usage_count")  // 出现在多少道题中
-  
-  // 审计字段
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-  
-  // 关联
-  questions QuestionVocabulary[]
-  
+  id                 String               @id @default(cuid())
+  uuid               String               @unique
+  word               String               @unique
+  version            Float?               @default(1.0)
+  phonetic           String?
+  definitionCn       String               @map("definition_cn")
+  etymology          Json?
+  cognates           Json?
+  exampleSentence    String?              @map("example_sentence")
+  exampleTranslation String?              @map("example_translation")
+  usage_count        Int?                 @default(0)
+  createdAt          DateTime?            @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime?            @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  questions          QuestionVocabulary[]
+
+  @@index([word], map: "idx_vocabularies_word")
   @@map("vocabularies")
-  @@index([word])
 }
 
-// ==========================================
-// 关联表: 题目-词汇 (Many-to-Many)
-// 设计要点：
-// - 通过 @@unique 防止重复关联
-// - onDelete: Cascade 确保数据一致性
-// ==========================================
 model QuestionVocabulary {
-  id           String   @id @default(cuid())
-  questionId   String   @map("question_id")
-  vocabularyId String   @map("vocabulary_id")
-  
-  // 词汇在题目中的角色
-  role         String?  @default("general")  // "stem", "option", "passage"
-  
-  // 关联
-  question     Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  vocabulary   Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
-  
-  createdAt    DateTime @default(now()) @map("created_at")
-  
+  id           String     @id @default(cuid())
+  questionId   String     @map("question_id")
+  vocabularyId String     @map("vocabulary_id")
+  role         String?    @default("general")
+  createdAt    DateTime?  @default(now()) @map("created_at") @db.Timestamptz(6)
+  question     Question   @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  vocabulary   Vocabulary @relation(fields: [vocabularyId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
   @@unique([questionId, vocabularyId])
+  @@index([questionId], map: "idx_qv_question_id")
+  @@index([vocabularyId], map: "idx_qv_vocabulary_id")
   @@map("question_vocabularies")
-  @@index([questionId])
-  @@index([vocabularyId])
 }
 
-// ==========================================
-// 新增表1: 套题集合 (Test Sets)
-// 用途：管理360套完整套题
-// ==========================================
-model TestSet {
-  id          String   @id @default(cuid())
-  
-  // 套题标识
-  setId       String   @unique @map("set_id")  // 如: "Official-Test-1"
-  name        String
-  description String?  @db.Text
-  
-  // 套题类型
-  testType    TestType @map("test_type")
-  
-  // 套题结构
-  totalSections   Int    @map("total_sections")
-  totalQuestions  Int    @map("total_questions")
-  timeLimit       Int?   @map("time_limit")  // 分钟
-  
-  // 元数据
-  isPublished Boolean  @default(false) @map("is_published")
-  publishDate DateTime? @map("publish_date")
-  
-  // 审计
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-  
-  // 关联
-  questions   TestSetQuestion[]
-  
-  @@map("test_sets")
-  @@index([setId])
-  @@index([testType])
-}
-
-// ==========================================
-// 关联表: 套题-题目 (Many-to-Many)
-// 设计要点：
-// - sectionNumber 和 questionOrder 确定题目在套题中的位置
-// ==========================================
-model TestSetQuestion {
-  id          String   @id @default(cuid())
-  testSetId   String   @map("test_set_id")
-  questionId  String   @map("question_id")
-  
-  // 题目在套题中的位置
-  sectionNumber  Int   @map("section_number")  // 第几个Section
-  questionOrder  Int   @map("question_order")  // Section内的题号
-  
-  // 关联
-  testSet     TestSet  @relation(fields: [testSetId], references: [id], onDelete: Cascade)
-  question    Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  
-  createdAt   DateTime @default(now()) @map("created_at")
-  
-  @@unique([testSetId, sectionNumber, questionOrder])
-  @@map("test_set_questions")
-  @@index([testSetId])
-  @@index([questionId])
-}
-
-// ==========================================
-// 扩展表: 阅读文章 (Reading Passages)
-// 用途：独立管理阅读文章，多道题可共享同一篇文章
-// ==========================================
-model ReadingPassage {
-  id          String   @id @default(cuid())
-  
-  passageId   String   @unique @map("passage_id")
-  title       String?
-  content     String   @db.Text  // 文章内容（可能很长）
-  
-  // 文章元数据
-  wordCount   Int?     @map("word_count")
-  topic       String?
-  difficulty  DifficultyLevel?
-  
-  // 审计
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-  
-  @@map("reading_passages")
-  @@index([passageId])
-}
-
-// ==========================================
-// 用户相关表
-// ==========================================
-model User {
-  id        String   @id @default(cuid())
-  userId    String   @unique @map("user_id")
-  username  String?  @unique
-  email     String   @unique
-  
-  targetScore Int?   @map("target_score")
-  
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt @map("updated_at")
-  
-  practices UserPractice[]
-  
-  @@map("users")
-}
-
-model UserPractice {
-  id         String   @id @default(cuid())
-  userId     String   @map("user_id")
-  questionId String   @map("question_id")
-  
-  userAnswer String?  @map("user_answer") @db.Text
-  isCorrect  Boolean  @map("is_correct")
-  timeSpent  Int?     @map("time_spent")
-  
-  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
-  
-  createdAt  DateTime @default(now()) @map("created_at")
-  
-  @@map("user_practices")
-  @@index([userId])
-  @@index([questionId])
-  @@index([createdAt])
-}
-
-// ==========================================
-// 统计表（可选）
-// ==========================================
 model LogicType {
-  id          String   @id @default(cuid())
-  officialTag String   @unique @map("official_tag")
-  nameCn      String   @map("name_cn")
-  description String?  @db.Text
-  
-  questionCount Int    @default(0) @map("question_count")
-  
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-  
+  id            String    @id @default(cuid())
+  officialTag   String    @unique @map("official_tag")
+  nameCn        String    @map("name_cn")
+  description   String?
+  questionCount Int?      @default(0) @map("question_count")
+  createdAt     DateTime? @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime? @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
   @@map("logic_types")
 }
 
 model TrapType {
-  id          String   @id @default(cuid())
-  code        String   @unique
-  nameCn      String   @map("name_cn")
-  description String?  @db.Text
-  
-  occurrenceCount Int  @default(0) @map("occurrence_count")
-  
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-  
+  id              String    @id @default(cuid())
+  code            String    @unique
+  nameCn          String    @map("name_cn")
+  description     String?
+  occurrenceCount Int?      @default(0) @map("occurrence_count")
+  createdAt       DateTime? @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime? @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+
   @@map("trap_types")
 }
 
 model WordRelation {
-  id         String   @id @default(cuid())
-  type       String
-  conceptCn  String   @map("concept_cn")
-  word1      String
-  word2      String
-  sourceId   String?  @map("source_id")
-  
-  createdAt  DateTime @default(now()) @map("created_at")
-  
+  id        String    @id @default(cuid())
+  type      String
+  conceptCn String    @map("concept_cn")
+  word1     String
+  word2     String
+  sourceId  String?   @map("source_id")
+  createdAt DateTime? @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([type], map: "idx_word_relations_type")
+  @@index([word1], map: "idx_word_relations_word1")
+  @@index([word2], map: "idx_word_relations_word2")
   @@map("word_relations")
-  @@index([type])
-  @@index([word1])
-  @@index([word2])
+}
+
+model User {
+  id          String         @id @default(cuid())
+  userId      String         @unique @map("user_id")
+  username    String?        @unique
+  email       String         @unique
+  targetScore Int?           @map("target_score")
+  createdAt   DateTime?      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime?      @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  practices   UserPractice[]
+
+  @@map("users")
+}
+
+model UserPractice {
+  id         String    @id @default(cuid())
+  userId     String    @map("user_id")
+  questionId String    @map("question_id")
+  userAnswer String?   @map("user_answer")
+  isCorrect  Boolean   @map("is_correct")
+  timeSpent  Int?      @map("time_spent")
+  createdAt  DateTime? @default(now()) @map("created_at") @db.Timestamptz(6)
+  questions  Question  @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([createdAt], map: "idx_user_practices_created_at")
+  @@index([questionId], map: "idx_user_practices_question_id")
+  @@index([userId], map: "idx_user_practices_user_id")
+  @@map("user_practices")
 }
