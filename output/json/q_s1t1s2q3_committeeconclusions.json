@@ -1,0 +1,304 @@
+{
+  "uuid": "q_s1t1s2q3_committeeconclusions",
+  "source_id": "Stage 1 Test 1 Section 2-3",
+  "version": 10.0,
+  "createdAt": "2025-10-05T16:20:00.000Z",
+  "updatedAt": "2025-10-05T16:20:00.000Z",
+  "difficulty": {
+    "level": "Medium",
+    "score": 5.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "中"
+    }
+  },
+  "questionText": "Given the (i)_________ the committees and the (ii)_________ nature of its investigation, it would be unreasonable to gainsay the committee's conclusions at first glance.",
+  "options": [
+    { "choice": "A", "text": "sterling reputation of" },
+    { "choice": "B", "text": "lack of finding of" },
+    { "choice": "C", "text": "ad hoc existence of" },
+    { "choice": "D", "text": "superficial" },
+    { "choice": "E", "text": "spontaneous" },
+    { "choice": "F", "text": "exhaustive" }
+  ],
+  "correctAnswer": "A, F",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦委员会调查 (Committee Investigations)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "水门事件调查委员会：1973年，美国参议院成立水门事件特别调查委员会，对尼克松总统的竞选团队闯入水门大厦民主党总部一事进行调查。这个委员会的详尽调查（exhaustive investigation）和公开听证会，通过电视直播让全国观众见证了权力制衡的过程，最终导致尼克松成为美国历史上第一位辞职的总统。",
+        "911委员会的独立性挑战：2002年成立的911委员会负责调查2001年恐怖袭击事件。委员会面临的最大挑战之一，就是如何保持独立性和声誉（sterling reputation），以确保公众信任其调查结论。委员会采取了公开听证、跨党派合作等措施来维护其公信力。",
+        "临时委员会vs常设委员会：政府中存在两类委员会：常设委员会（如国会的各个专门委员会）和临时委员会（ad hoc committees）。临时委员会通常为特定事件或问题而设立，调查结束后即解散。它们的权威性往往取决于其成员的声誉和调查的深度。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-causation (因果关系逻辑)",
+      "signal_words": ["Given...", "it would be unreasonable to..."],
+      "oneLiner": "因为委员会有某些特质，所以不能轻易反对其结论",
+      "challenge": "理解什么样的委员会特质会让人不敢轻易质疑其结论"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子逻辑",
+        "strategy_expert": "Given... 引导原因，主句是质疑委员会结论是不合理的。这是一个因果关系：正是因为委员会具有某些正面特质，所以其结论不应被轻易质疑。unreasonable to gainsay（不合理质疑）是一个双重否定，实际上是肯定委员会结论的可信度。",
+        "thought_process_os": "句子说质疑委员会结论是不合理的，为什么不合理？因为委员会很牛、调查很认真。所以第一空要填委员会的正面特质，第二空要填调查的正面特质。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "分析第一空 (i)",
+        "strategy_expert": "第一空描述的是委员会本身的特质。既然不应质疑它，那么委员会必然具有某种正面的、令人信服的特征，如良好的声誉。",
+        "thought_process_os": "A. sterling reputation of：卓越的声誉。完美！声誉好 → 结论可信。B. lack of finding of：缺乏调查结果。这个反了，缺乏结果怎么让人信服？C. ad hoc existence of：临时性的存在。临时委员会可能权威性不足，不符合逻辑。"
+      },
+      {
+        "step": 3,
+        "step_name_cn": "分析第二空 (ii)",
+        "strategy_expert": "第二空描述的是调查的性质。既然不应质疑结论，那么调查必然是深入的、全面的、彻底的，而非肤浅的或随意的。",
+        "thought_process_os": "D. superficial：肤浅的。这个反了，肤浅的调查怎么让人信服？E. spontaneous：自发的、即兴的。也不对。F. exhaustive：详尽的、彻底的。完美！彻底的调查 → 结论可信。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. sterling reputation of",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "sterling 意为优秀的、可靠的，源自英镑（sterling silver，纯银）。卓越的声誉完美地解释了为什么不应轻易质疑委员会的结论——一个声誉卓著的委员会，其调查结果自然更具可信度。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "B. lack of finding of",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个反向逻辑的选项。缺乏调查结果会削弱委员会结论的可信度，与主句不应质疑的逻辑相悖。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "C. ad hoc existence of",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个相关但不精确的选项。临时性的存在可能暗示委员会是为特定目的而设的，但临时性本身是中性的，不足以支撑不应质疑结论的强烈判断。关键在于委员会的声誉或权威，而非其临时性。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "D. superficial",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个反向逻辑的选项。肤浅的调查会降低结论的可信度，与不应质疑的逻辑相悖。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "E. spontaneous",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。自发的、即兴的调查听起来缺乏计划性和严谨性，不足以让人信服其结论。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "F. exhaustive",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "exhaustive 意为详尽的、彻底的，源自 exhaust（用尽）。详尽的调查与卓越的声誉共同构成了不应质疑结论的充分理由——既有权威性，又有深度，自然令人信服。",
+          "trap_types": null
+        }
+      }
+    ],
+    "sentenceWithAnswer": "Given the sterling reputation of the committees and the exhaustive nature of its investigation, it would be unreasonable to gainsay the committee's conclusions at first glance.",
+    "translation": "鉴于该委员会的卓越声誉以及其调查的详尽性，乍一看就质疑该委员会的结论是不合理的。",
+    "grammaticalAnalysis": {
+      "translation_notes": "gainsay 是一个较为正式的词，意为反驳、否认。at first glance 意为乍一看、初步看来。",
+      "breakdown_hierarchical": [
+        "Given... 是分词短语作状语，表示原因。",
+        "主句：it would be unreasonable to gainsay the committee's conclusions",
+        "it 是形式主语，真正的主语是 to gainsay... 这个不定式短语。",
+        "at first glance 作状语，修饰整个主句。"
+      ],
+      "visual_tree_mermaid": "graph TD; A[\\\"Given 原因\\\"] --> B[\\\"Sterling reputation\\\"]; A --> C[\\\"Exhaustive investigation\\\"]; B --> D[\\\"Therefore...\\\"]; C --> D; D --> E[\\\"Unreasonable to gainsay conclusions\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20251005_committee",
+      "word": "committee",
+      "version": 1.0,
+      "phonetic": "[kəˈmɪti]",
+      "definition_cn": "n. 委员会",
+      "etymology": {
+        "deconstruction": "com- (together，一起) + mittere (to send，派遣)",
+        "constructive_essence": "指被一起派遣去执行某项任务的一组人，即委员会。"
+      },
+      "cognates": [
+        { "word": "commit", "definition_cn": "v. 承诺，犯罪" },
+        { "word": "mission", "definition_cn": "n. 使命" }
+      ],
+      "example": {
+        "sentence": "The committee will meet next week.",
+        "translation_cn": "委员会将于下周开会。"
+      }
+    },
+    {
+      "uuid": "v_20251005_investigation",
+      "word": "investigation",
+      "version": 1.0,
+      "phonetic": "[ɪnˌvestɪˈɡeɪʃn]",
+      "definition_cn": "n. 调查，研究",
+      "etymology": {
+        "deconstruction": "in- (into，进入) + vestigare (to track，追踪)",
+        "constructive_essence": "指深入追踪事实真相的过程，即调查。"
+      },
+      "cognates": [
+        { "word": "investigate", "definition_cn": "v. 调查" },
+        { "word": "vestige", "definition_cn": "n. 遗迹，痕迹" }
+      ],
+      "example": {
+        "sentence": "The police launched an investigation.",
+        "translation_cn": "警方展开了调查。"
+      }
+    },
+    {
+      "uuid": "v_20251005_gainsay",
+      "word": "gainsay",
+      "version": 1.0,
+      "phonetic": "[ˌɡeɪnˈseɪ]",
+      "definition_cn": "v. 反驳，否认",
+      "etymology": {
+        "deconstruction": "gain- (against，反对) + say (说)",
+        "constructive_essence": "指反着说或说相反的话，即反驳、否认。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "No one can gainsay his expertise.",
+        "translation_cn": "没人能否认他的专业知识。"
+      }
+    },
+    {
+      "uuid": "v_20251005_conclusion",
+      "word": "conclusion",
+      "version": 1.0,
+      "phonetic": "[kənˈkluːʒn]",
+      "definition_cn": "n. 结论，结束",
+      "etymology": {
+        "deconstruction": "con- (together，一起) + cludere (to close，关闭)",
+        "constructive_essence": "指将各种证据关闭在一起得出的最终判断，即结论。"
+      },
+      "cognates": [
+        { "word": "conclude", "definition_cn": "v. 总结，结束" },
+        { "word": "include", "definition_cn": "v. 包括（关在里面）" }
+      ],
+      "example": {
+        "sentence": "What conclusion did you reach?",
+        "translation_cn": "你得出了什么结论？"
+      }
+    },
+    {
+      "uuid": "v_20251005_sterling",
+      "word": "sterling",
+      "version": 1.0,
+      "phonetic": "[ˈstɜːlɪŋ]",
+      "definition_cn": "adj. 优秀的，可靠的 n. 英镑",
+      "etymology": {
+        "deconstruction": "源自sterling silver（纯银），指英国货币的标准成色",
+        "constructive_essence": "从纯银的高质量引申为优秀的、可靠的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "He has a sterling character.",
+        "translation_cn": "他品格高尚。"
+      }
+    },
+    {
+      "uuid": "v_20251005_reputation",
+      "word": "reputation",
+      "version": 1.0,
+      "phonetic": "[ˌrepjuˈteɪʃn]",
+      "definition_cn": "n. 名声，声誉",
+      "etymology": {
+        "deconstruction": "re- (again，再次) + putare (to think，认为)",
+        "constructive_essence": "指人们反复认为你是什么样的人，即声誉。"
+      },
+      "cognates": [
+        { "word": "repute", "definition_cn": "n. 名望" },
+        { "word": "compute", "definition_cn": "v. 计算（反复思考数字）" }
+      ],
+      "example": {
+        "sentence": "The school has an excellent reputation.",
+        "translation_cn": "这所学校享有极好的声誉。"
+      }
+    },
+    {
+      "uuid": "v_20251005_superficial",
+      "word": "superficial",
+      "version": 1.0,
+      "phonetic": "[ˌsuːpəˈfɪʃl]",
+      "definition_cn": "adj. 肤浅的，表面的",
+      "etymology": {
+        "deconstruction": "super- (above，在...上面) + facies (face，表面)",
+        "constructive_essence": "指只停留在表面（surface）上的，即肤浅的。"
+      },
+      "cognates": [
+        { "word": "surface", "definition_cn": "n. 表面" },
+        { "word": "face", "definition_cn": "n. 脸，表面" }
+      ],
+      "example": {
+        "sentence": "His knowledge of the subject is superficial.",
+        "translation_cn": "他对这个主题的了解很肤浅。"
+      }
+    },
+    {
+      "uuid": "v_20251005_spontaneous",
+      "word": "spontaneous",
+      "version": 1.0,
+      "phonetic": "[spɒnˈteɪniəs]",
+      "definition_cn": "adj. 自发的，即兴的",
+      "etymology": {
+        "deconstruction": "源自拉丁语 sponte，意为自愿地",
+        "constructive_essence": "指自愿或自发产生的，非外力强迫或预先计划的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "The audience gave a spontaneous round of applause.",
+        "translation_cn": "观众自发地鼓起掌来。"
+      }
+    },
+    {
+      "uuid": "v_20251005_exhaustive",
+      "word": "exhaustive",
+      "version": 1.0,
+      "phonetic": "[ɪɡˈzɔːstɪv]",
+      "definition_cn": "adj. 详尽的，彻底的",
+      "etymology": {
+        "deconstruction": "ex- (out，完全) + haurire (to draw，抽取) + -ive",
+        "constructive_essence": "指完全抽干所有可能性，即详尽无遗的、彻底的。"
+      },
+      "cognates": [
+        { "word": "exhaust", "definition_cn": "v. 耗尽，使筋疲力尽" }
+      ],
+      "example": {
+        "sentence": "The report provides an exhaustive analysis.",
+        "translation_cn": "该报告提供了详尽的分析。"
+      }
+    },
+    {
+      "uuid": "v_20251005_adhoc",
+      "word": "ad hoc",
+      "version": 1.0,
+      "phonetic": "[ˌæd ˈhɒk]",
+      "definition_cn": "adj./adv. 临时的，特设的",
+      "etymology": {
+        "deconstruction": "拉丁语短语，ad (for，为了) + hoc (this，这个)",
+        "constructive_essence": "指为了这个（特定目的）而设的，即临时的、特设的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "We formed an ad hoc committee to address the issue.",
+        "translation_cn": "我们成立了一个临时委员会来处理这个问题。"
+      }
+    }
+  ]
+}

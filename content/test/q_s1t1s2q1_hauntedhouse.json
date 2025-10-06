@@ -1,0 +1,259 @@
+{
+  "uuid": "q_s1t1s2q1_hauntedhouse",
+  "source_id": "Stage 1 Test 1 Section 2-1",
+  "version": 10.0,
+  "createdAt": "2025-10-05T16:00:00.000Z",
+  "updatedAt": "2025-10-05T16:00:00.000Z",
+  "difficulty": {
+    "level": "Easy",
+    "score": 3.0,
+    "factors": {
+      "sentence_complexity": "低",
+      "vocab_rarity": "中",
+      "logic_subtlety": "低"
+    }
+  },
+  "questionText": "My grandma has a strong belief in all things _________: she insists, for example, that the house in which she lived as a child was haunted.",
+  "options": [
+    { "choice": "A", "text": "clamorous" },
+    { "choice": "B", "text": "invidious" },
+    { "choice": "C", "text": "numinous" },
+    { "choice": "D", "text": "empirical" },
+    { "choice": "E", "text": "sonorous" }
+  ],
+  "correctAnswer": "C",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦超自然信仰 (Supernatural Beliefs)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "鬼屋现象的心理学解释：心理学家发现，所谓的闹鬼体验往往与次声波有关。频率低于20赫兹的次声波人耳无法听到，但会引起眼球振动、焦虑感和有东西在附近的错觉。许多老房子因为结构问题容易产生次声波，这可能解释了为什么人们会觉得老房子有鬼。",
+        "世界各地的鬼屋传统：几乎每个文化都有关于闹鬼房屋的传说。在日本，这类房屋被称为凶宅，房价会大幅下降。在英国，一些城堡因为有鬼反而成为旅游景点。有趣的是，这些传说往往与房屋的历史事件（如谋杀、意外死亡）有关。",
+        "信念的力量：心理学研究表明，如果一个人相信某个地方有鬼，他们的大脑会更容易将正常的声音、阴影解释为超自然现象。这种现象叫做确认偏误（Confirmation Bias），即我们倾向于寻找和记住支持我们既有信念的证据。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-elaboration-definition (定义解释逻辑)",
+      "signal_words": [":", "for example"],
+      "oneLiner": "冒号后面的例子，定义了空格中的词",
+      "challenge": "理解相信房子闹鬼属于什么类型的信念"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构",
+        "strategy_expert": "冒号将句子分为两部分。前半句说奶奶相信所有某类事物，后半句用 for example 给出了一个具体例子：相信房子闹鬼。这个例子就是在定义某类事物是什么。",
+        "thought_process_os": "又是冒号解释！后面说奶奶相信房子闹鬼，那前面空格里肯定是超自然的、神秘的、灵异的这类词。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找能够准确描述超自然、神秘、与灵魂/鬼魂相关的词汇。",
+        "thought_process_os": "A. clamorous：吵闹的。和鬼没关系。B. invidious：令人反感的、招嫉妒的。不对。C. numinous：神秘的、超自然的、有神性的。完美匹配！D. empirical：基于经验的、实证的。这个反了，闹鬼恰恰不是实证的。E. sonorous：声音洪亮的。无关。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. clamorous",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。吵闹的描述的是声音特征，与超自然信仰或鬼魂的概念完全无关。虽然闹鬼中有闹字，但这里考查的是信念的性质，而非声音。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "B. invidious",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。令人反感的、招致嫉妒的与超自然信仰没有直接联系。虽然有人可能觉得迷信令人反感，但这是对信念的评判，而非信念本身的性质。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "C. numinous",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "numinous 意为神秘的、超自然的、有神性的，源自拉丁语 numen（神灵）。它精准地描述了相信鬼魂这类与超自然、灵性世界相关的信念，完美契合题干中haunted（闹鬼）的例子。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "D. empirical",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个反向逻辑的选项。基于经验和证据的恰恰与相信鬼魂这种缺乏实证支持的超自然信仰相反。如果奶奶相信empirical的事物，她就不会相信房子闹鬼了。",
+          "trap_types": ["Logic Reversal"]
+        }
+      },
+      {
+        "option": "E. sonorous",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。声音洪亮的、响亮的描述的是声音质量，与超自然信仰无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "My grandma has a strong belief in all things numinous: she insists, for example, that the house in which she lived as a child was haunted.",
+    "translation": "我的奶奶对所有神秘超自然的事物都深信不疑：例如，她坚称自己童年居住的房子闹鬼。",
+    "grammaticalAnalysis": {
+      "translation_notes": "has a strong belief in 表示坚定地相信某事。",
+      "breakdown_hierarchical": [
+        "主句：My grandma has a strong belief in all things numinous",
+        "冒号后为解释说明，进一步阐述奶奶的信念。",
+        "she insists 引导一个宾语从句 that the house... was haunted。",
+        "in which she lived as a child 是定语从句，修饰 the house。"
+      ],
+      "visual_tree_mermaid": "graph TD; A[\\\"Grandma has belief\\\"] --> B[\\\"in all things numinous\\\"]; B -- \\\"例如（冒号）\\\" --> C[\\\"She insists\\\"]; C --> D[\\\"that house was haunted\\\"]; D -- \\\"定语从句\\\" --> E[\\\"in which she lived\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20251005_belief",
+      "word": "belief",
+      "version": 1.0,
+      "phonetic": "[bɪˈliːf]",
+      "definition_cn": "n. 信念，信仰",
+      "etymology": {
+        "deconstruction": "believe (相信) + -f (名词后缀)",
+        "constructive_essence": "指一个人所相信（believe）的观点或看法。"
+      },
+      "cognates": [
+        { "word": "believe", "definition_cn": "v. 相信" },
+        { "word": "incredible", "definition_cn": "adj. 难以置信的" }
+      ],
+      "example": {
+        "sentence": "She has a strong belief in freedom.",
+        "translation_cn": "她坚信自由。"
+      }
+    },
+    {
+      "uuid": "v_20251005_numinous",
+      "word": "numinous",
+      "version": 1.0,
+      "phonetic": "[ˈnjuːmɪnəs]",
+      "definition_cn": "adj. 神秘的，超自然的，有神性的",
+      "etymology": {
+        "deconstruction": "numen (神灵，神力) + -ous (形容词后缀)",
+        "constructive_essence": "指具有神灵（numen）特质的，即让人感到敬畏、神秘、超越凡俗的。"
+      },
+      "cognates": [
+        { "word": "numen", "definition_cn": "n. 神灵" }
+      ],
+      "example": {
+        "sentence": "The ancient temple had a numinous atmosphere.",
+        "translation_cn": "这座古老的寺庙有一种神秘的氛围。"
+      }
+    },
+    {
+      "uuid": "v_20251005_insist",
+      "word": "insist",
+      "version": 1.0,
+      "phonetic": "[ɪnˈsɪst]",
+      "definition_cn": "v. 坚持，坚称",
+      "etymology": {
+        "deconstruction": "in- (on, upon，在...上) + sistere (to stand，站立)",
+        "constructive_essence": "指站立在（stand on）某个立场上不动摇，即坚持。"
+      },
+      "cognates": [
+        { "word": "consist", "definition_cn": "v. 组成（站在一起）" },
+        { "word": "resist", "definition_cn": "v. 抵抗（站在对面）" }
+      ],
+      "example": {
+        "sentence": "He insisted that he was innocent.",
+        "translation_cn": "他坚称自己是无辜的。"
+      }
+    },
+    {
+      "uuid": "v_20251005_haunt",
+      "word": "haunt",
+      "version": 1.0,
+      "phonetic": "[hɔːnt]",
+      "definition_cn": "v. （鬼魂）出没于；困扰 n. 常去的地方",
+      "etymology": {
+        "deconstruction": "源于古法语 hanter，意为频繁光顾",
+        "constructive_essence": "从频繁光顾某地引申为鬼魂经常出现在某处，即闹鬼。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "They say the old castle is haunted.",
+        "translation_cn": "据说那座古堡闹鬼。"
+      }
+    },
+    {
+      "uuid": "v_20251005_clamorous",
+      "word": "clamorous",
+      "version": 1.0,
+      "phonetic": "[ˈklæmərəs]",
+      "definition_cn": "adj. 吵闹的，喧哗的",
+      "etymology": {
+        "deconstruction": "clamor (喧闹，大声要求) + -ous (形容词后缀)",
+        "constructive_essence": "充满喧闹（clamor）的。"
+      },
+      "cognates": [
+        { "word": "clamor", "definition_cn": "n. 喧闹 v. 大声要求" },
+        { "word": "exclaim", "definition_cn": "v. 惊呼" }
+      ],
+      "example": {
+        "sentence": "The meeting became clamorous with competing voices.",
+        "translation_cn": "会议变得喧闹，各种声音此起彼伏。"
+      }
+    },
+    {
+      "uuid": "v_20251005_invidious",
+      "word": "invidious",
+      "version": 1.0,
+      "phonetic": "[ɪnˈvɪdiəs]",
+      "definition_cn": "adj. 令人反感的，招嫉妒的，不公平的",
+      "etymology": {
+        "deconstruction": "in- (against，反对) + videre (to see，看) + -ous",
+        "constructive_essence": "指被人以敌意的眼光看待（seen against），即招致反感或嫉妒的。"
+      },
+      "cognates": [
+        { "word": "envy", "definition_cn": "n. 嫉妒" },
+        { "word": "video", "definition_cn": "n. 视频（可看见的）" }
+      ],
+      "example": {
+        "sentence": "The teacher avoided making invidious comparisons between students.",
+        "translation_cn": "老师避免在学生之间进行令人反感的比较。"
+      }
+    },
+    {
+      "uuid": "v_20251005_empirical",
+      "word": "empirical",
+      "version": 1.0,
+      "phonetic": "[ɪmˈpɪrɪkl]",
+      "definition_cn": "adj. 基于经验的，实证的",
+      "etymology": {
+        "deconstruction": "源自希腊语 empeiria（经验）",
+        "constructive_essence": "指基于实际经验和观察，而非理论或信仰的。"
+      },
+      "cognates": [
+        { "word": "experience", "definition_cn": "n. 经验" }
+      ],
+      "example": {
+        "sentence": "The theory is supported by empirical evidence.",
+        "translation_cn": "该理论得到了实证证据的支持。"
+      }
+    },
+    {
+      "uuid": "v_20251005_sonorous",
+      "word": "sonorous",
+      "version": 1.0,
+      "phonetic": "[səˈnɔːrəs]",
+      "definition_cn": "adj. 声音洪亮的，响亮的",
+      "etymology": {
+        "deconstruction": "sonor (声音) + -ous (形容词后缀)",
+        "constructive_essence": "指具有（良好的）声音（sonor）的，即声音洪亮、悦耳的。"
+      },
+      "cognates": [
+        { "word": "sound", "definition_cn": "n. 声音" },
+        { "word": "resonate", "definition_cn": "v. 共鸣" }
+      ],
+      "example": {
+        "sentence": "The actor has a sonorous voice.",
+        "translation_cn": "这位演员有着洪亮的嗓音。"
+      }
+    }
+  ]
+}

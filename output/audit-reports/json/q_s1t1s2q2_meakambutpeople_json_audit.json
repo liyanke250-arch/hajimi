@@ -1,0 +1,82 @@
+{
+  "file": "q_s1t1s2q2_meakambutpeople.json",
+  "timestamp": "2025-10-05T16:11:00Z",
+  "audit_type": "json_format_and_data",
+  "auditor": "Node.js + JSON Audit V1.0",
+  "result": {
+    "status": "pass",
+    "grade": "A",
+    "ready_for_import": true
+  },
+  "checks": {
+    "format_valid": {
+      "status": "pass",
+      "method": "JSON.parse()",
+      "parse_time_ms": 2,
+      "details": "JSON语法完全正确，无解析错误"
+    },
+    "required_fields_complete": {
+      "status": "pass",
+      "checked_fields": [
+        "uuid", "source_id", "version", "createdAt", "updatedAt",
+        "difficulty", "questionText", "options", "correctAnswer",
+        "analysis", "vocabulary"
+      ],
+      "missing_fields": [],
+      "details": "所有根级别必需字段都存在"
+    },
+    "vocabulary_complete": {
+      "status": "pass",
+      "option_words": ["impenetrable", "immutable", "proprietary", "didactic", "self-perpetuating"],
+      "vocab_words": ["legend", "associate", "cave", "secret", "impenetrable", "immutable", "proprietary", "didactic", "perpetuate"],
+      "stem_words_covered": true,
+      "option_words_covered": true,
+      "missing_words": [],
+      "coverage": "100%",
+      "note": "self-perpetuating的词根perpetuate已收录"
+    },
+    "data_types_correct": {
+      "status": "pass",
+      "type_checks": {
+        "uuid": "string ✓",
+        "version": "number ✓",
+        "difficulty.score": "number ✓",
+        "options": "array ✓",
+        "vocabulary": "array ✓",
+        "analysis": "object ✓"
+      }
+    },
+    "special_chars_safe": {
+      "status": "pass",
+      "mermaid_escape_correct": true,
+      "no_unescaped_quotes": true,
+      "details": "Mermaid代码中的双引号已正确转义为 \\\""
+    },
+    "data_reasonable": {
+      "status": "pass",
+      "checks": {
+        "difficulty_score": "3/10 在合理范围 (1-10)",
+        "difficulty_level": "Easy 与 score=3 匹配",
+        "correct_answer": "C 存在于options中",
+        "uuid_format": "符合 q_s1t1s2q2_meakambutpeople 规范",
+        "options_count": "5个选项",
+        "vocabulary_count": "9个词汇"
+      }
+    }
+  },
+  "statistics": {
+    "file_size_bytes": 14336,
+    "file_size_kb": 14,
+    "vocabulary_count": 9,
+    "options_count": 5,
+    "analysis_keys": 7,
+    "total_cognates": 8
+  },
+  "errors": [],
+  "warnings": [],
+  "import_ready": true,
+  "next_steps": [
+    "可以添加到导入队列",
+    "建议与其他题目一起批量导入"
+  ]
+}

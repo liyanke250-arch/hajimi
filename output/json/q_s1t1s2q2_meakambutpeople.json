@@ -1,0 +1,279 @@
+{
+  "uuid": "q_s1t1s2q2_meakambutpeople",
+  "source_id": "Stage 1 Test 1 Section 2-2",
+  "version": 10.0,
+  "createdAt": "2025-10-05T16:10:00.000Z",
+  "updatedAt": "2025-10-05T16:10:00.000Z",
+  "difficulty": {
+    "level": "Easy",
+    "score": 3.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "低"
+    }
+  },
+  "questionText": "Among the Meakambut people of Papua New Guinea, legends are associated with specific caves in the Sepik region, and these legends are _________: only the cave owner can share its secrets.",
+  "options": [
+    { "choice": "A", "text": "impenetrable" },
+    { "choice": "B", "text": "immutable" },
+    { "choice": "C", "text": "proprietary" },
+    { "choice": "D", "text": "didactic" },
+    { "choice": "E", "text": "self-perpetuating" }
+  ],
+  "correctAnswer": "C",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦美卡姆布特人 (The Meakambut People)",
+      "association_principle": "Strong Entity Association (Vertical) & Knowledge Parallelism",
+      "content": [
+        "巴布亚新几内亚的语言多样性：巴布亚新几内亚是世界上语言最多样化的国家之一，在仅800万人口中，使用着超过800种不同的语言。这种极端的语言多样性源于该国复杂的地理环境（高山、雨林、河流）将不同部落隔离了数千年，使得每个小群体都发展出了自己独特的语言和文化。",
+        "洞穴作为文化记忆的载体：在许多原住民文化中，洞穴不仅是物理空间，更是活的图书馆。洞穴中的岩画、传说和仪式，承载着部落的历史、神话和生存智慧。这些知识往往通过口头传统代代相传，而特定洞穴的所有权，实际上意味着对这些知识传承的管理权。",
+        "知识产权的原始形态：现代社会的知识产权概念，在原住民文化中早已存在，只是形式不同。某些歌曲、故事、仪式知识被视为特定家族或个人的财产，未经许可不得使用。这种传统保护了文化的完整性，也确保了知识传承的秩序。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "support-elaboration-definition (定义解释逻辑)",
+      "signal_words": [":"],
+      "oneLiner": "冒号后的内容，定义了传说的性质",
+      "challenge": "理解只有洞穴主人能分享秘密意味着这些传说具有什么特性"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "分析句子结构",
+        "strategy_expert": "冒号将句子分为两部分。前半句说这些传说是某种性质的，冒号后用 only the cave owner can share its secrets 来定义这种性质。关键词是 only（只有）和 owner（主人/拥有者）。",
+        "thought_process_os": "又是经典的冒号解释题！后面说只有洞穴主人能分享秘密，这说明这些传说不是公开的，而是私有的、专属的。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "筛选选项",
+        "strategy_expert": "在选项中寻找能够表达私有的、专属的、受限制的含义的词。",
+        "thought_process_os": "A. impenetrable：难以理解的、不可穿透的。不对，重点不是难懂，而是专属。B. immutable：不可改变的。无关。C. proprietary：专有的、私有的。完美！只有主人能分享 = 专有的。D. didactic：说教的、教诲的。无关。E. self-perpetuating：自我延续的。无关。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. impenetrable",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个相关但不精确的选项。难以理解的、不可穿透的可能描述了传说的神秘性，但题干强调的不是传说的难度，而是其专属性。重点是谁能分享，而非是否难懂。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "B. immutable",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。不可改变的描述的是传说内容的稳定性，与只有主人能分享所体现的所有权或专属性无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "C. proprietary",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "proprietary 意为专有的、私有的，源自 proprietor（所有者）。它精准地描述了只有洞穴主人（owner）能分享所体现的专属性和所有权特征，这些传说就像私有财产一样，不是公开的知识。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "D. didactic",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。说教的、教诲的描述的是传说的功能或风格，与所有权或专属性无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      },
+      {
+        "option": "E. self-perpetuating",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。自我延续的描述的是传说如何传承，与谁有权分享这个核心问题无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "Among the Meakambut people of Papua New Guinea, legends are associated with specific caves in the Sepik region, and these legends are proprietary: only the cave owner can share its secrets.",
+    "translation": "在巴布亚新几内亚的美卡姆布特人中，传说与塞皮克地区的特定洞穴相关联，而且这些传说是专有的：只有洞穴主人才能分享其中的秘密。",
+    "grammaticalAnalysis": {
+      "translation_notes": "are associated with 表示与...相关联。proprietary 在这里强调了知识的专属性和所有权。",
+      "breakdown_hierarchical": [
+        "介词短语：Among the Meakambut people of Papua New Guinea 作状语，说明地点和人群。",
+        "主句：legends are associated with specific caves... and these legends are proprietary",
+        "这是一个并列句，用 and 连接两个独立的陈述。",
+        "冒号后：only the cave owner can share its secrets 解释说明为什么传说是 proprietary。"
+      ],
+      "visual_tree_mermaid": "graph TD; A[\\\"Among Meakambut people\\\"] --> B[\\\"Legends are associated with caves\\\"]; B -- \\\"and\\\" --> C[\\\"Legends are proprietary\\\"]; C -- \\\"为什么？（冒号）\\\" --> D[\\\"Only owner can share secrets\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20251005_legend",
+      "word": "legend",
+      "version": 1.0,
+      "phonetic": "[ˈledʒənd]",
+      "definition_cn": "n. 传说，传奇",
+      "etymology": {
+        "deconstruction": "源自拉丁语 legenda，意为应该被阅读的东西",
+        "constructive_essence": "原指中世纪关于圣徒生平的应该被阅读的故事，后泛指所有传说和传奇。"
+      },
+      "cognates": [
+        { "word": "legible", "definition_cn": "adj. 清晰可读的" }
+      ],
+      "example": {
+        "sentence": "The legend of King Arthur has inspired countless stories.",
+        "translation_cn": "亚瑟王的传说激发了无数故事。"
+      }
+    },
+    {
+      "uuid": "v_20251005_associate",
+      "word": "associate",
+      "version": 1.0,
+      "phonetic": "[əˈsəʊʃieɪt]",
+      "definition_cn": "v. 关联，联系 n. 同事，伙伴",
+      "etymology": {
+        "deconstruction": "as- (to，向) + sociare (to join，加入)",
+        "constructive_essence": "指向...加入或联合在一起，即产生关联。"
+      },
+      "cognates": [
+        { "word": "social", "definition_cn": "adj. 社会的" },
+        { "word": "society", "definition_cn": "n. 社会" }
+      ],
+      "example": {
+        "sentence": "I don't associate him with sports.",
+        "translation_cn": "我不会把他和体育联系起来。"
+      }
+    },
+    {
+      "uuid": "v_20251005_cave",
+      "word": "cave",
+      "version": 1.0,
+      "phonetic": "[keɪv]",
+      "definition_cn": "n. 洞穴，山洞",
+      "etymology": {
+        "deconstruction": "源自拉丁语 cavus，意为中空的",
+        "constructive_essence": "指中空的（hollow）空间，即洞穴。"
+      },
+      "cognates": [
+        { "word": "cavity", "definition_cn": "n. 空洞，蛀洞" },
+        { "word": "excavate", "definition_cn": "v. 挖掘" }
+      ],
+      "example": {
+        "sentence": "The explorers discovered a hidden cave.",
+        "translation_cn": "探险家发现了一个隐藏的洞穴。"
+      }
+    },
+    {
+      "uuid": "v_20251005_secret",
+      "word": "secret",
+      "version": 1.0,
+      "phonetic": "[ˈsiːkrət]",
+      "definition_cn": "n. 秘密 adj. 秘密的",
+      "etymology": {
+        "deconstruction": "源自拉丁语 secretus，意为分离的、隐藏的",
+        "constructive_essence": "指被分离或隐藏起来不让人知道的信息。"
+      },
+      "cognates": [
+        { "word": "secrete", "definition_cn": "v. 分泌；隐藏" }
+      ],
+      "example": {
+        "sentence": "Can you keep a secret?",
+        "translation_cn": "你能保守秘密吗？"
+      }
+    },
+    {
+      "uuid": "v_20251005_impenetrable",
+      "word": "impenetrable",
+      "version": 1.0,
+      "phonetic": "[ɪmˈpenɪtrəbl]",
+      "definition_cn": "adj. 不可穿透的，难以理解的",
+      "etymology": {
+        "deconstruction": "im- (not，不) + penetrate (穿透) + -able (能够)",
+        "constructive_essence": "指不能被穿透的，引申为难以理解或进入的。"
+      },
+      "cognates": [
+        { "word": "penetrate", "definition_cn": "v. 穿透，渗透" }
+      ],
+      "example": {
+        "sentence": "The jungle was impenetrable.",
+        "translation_cn": "丛林密不可穿。"
+      }
+    },
+    {
+      "uuid": "v_20251005_immutable",
+      "word": "immutable",
+      "version": 1.0,
+      "phonetic": "[ɪˈmjuːtəbl]",
+      "definition_cn": "adj. 不可改变的，永恒的",
+      "etymology": {
+        "deconstruction": "im- (not，不) + mutable (可改变的)",
+        "constructive_essence": "指不可改变的。"
+      },
+      "cognates": [
+        { "word": "mutable", "definition_cn": "adj. 可变的" },
+        { "word": "mutate", "definition_cn": "v. 变异" }
+      ],
+      "example": {
+        "sentence": "The laws of physics are immutable.",
+        "translation_cn": "物理定律是不可改变的。"
+      }
+    },
+    {
+      "uuid": "v_20251005_proprietary",
+      "word": "proprietary",
+      "version": 1.0,
+      "phonetic": "[prəˈpraɪətəri]",
+      "definition_cn": "adj. 专有的，私有的",
+      "etymology": {
+        "deconstruction": "proprietor (所有者) + -ary (形容词后缀)",
+        "constructive_essence": "指属于特定所有者（proprietor）的，即专有的、私有的。"
+      },
+      "cognates": [
+        { "word": "property", "definition_cn": "n. 财产，所有权" },
+        { "word": "appropriate", "definition_cn": "v. 占用 adj. 适当的" }
+      ],
+      "example": {
+        "sentence": "This is proprietary information.",
+        "translation_cn": "这是专有信息。"
+      }
+    },
+    {
+      "uuid": "v_20251005_didactic",
+      "word": "didactic",
+      "version": 1.0,
+      "phonetic": "[daɪˈdæktɪk]",
+      "definition_cn": "adj. 说教的，教诲的",
+      "etymology": {
+        "deconstruction": "源自希腊语 didaktikos，意为善于教导的",
+        "constructive_essence": "指旨在教导的，有时带有过于说教的贬义。"
+      },
+      "cognates": [
+        { "word": "didactics", "definition_cn": "n. 教学法" }
+      ],
+      "example": {
+        "sentence": "The novel was criticized for being too didactic.",
+        "translation_cn": "这部小说因过于说教而受到批评。"
+      }
+    },
+    {
+      "uuid": "v_20251005_perpetuate",
+      "word": "perpetuate",
+      "version": 1.0,
+      "phonetic": "[pəˈpetʃueɪt]",
+      "definition_cn": "v. 使永久，使持续",
+      "etymology": {
+        "deconstruction": "per- (through，贯穿) + petere (to seek，寻求) + -ate",
+        "constructive_essence": "指贯穿始终地寻求，即使某事物永久持续。"
+      },
+      "cognates": [
+        { "word": "perpetual", "definition_cn": "adj. 永久的" },
+        { "word": "petition", "definition_cn": "n. 请愿" }
+      ],
+      "example": {
+        "sentence": "We should not perpetuate harmful stereotypes.",
+        "translation_cn": "我们不应该让有害的刻板印象延续下去。"
+      }
+    }
+  ]
+}

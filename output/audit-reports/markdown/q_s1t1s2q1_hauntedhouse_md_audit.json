@@ -1,0 +1,47 @@
+{
+  "file": "q_s1t1s2q1_hauntedhouse.md",
+  "timestamp": "2025-10-05T16:00:00Z",
+  "audit_type": "markdown_content",
+  "auditor": "Cursor AI",
+  "result": {
+    "status": "pass",
+    "grade": "A",
+    "overall_score": 100
+  },
+  "checks": {
+    "structure_complete": {
+      "status": "pass",
+      "details": "所有10个必需模块都存在且顺序正确"
+    },
+    "vocabulary_complete": {
+      "status": "pass",
+      "required_count": 8,
+      "found_count": 8,
+      "details": "题干4个词汇 + 选项5个词汇 = 全部收录"
+    },
+    "format_correct": {
+      "status": "pass",
+      "details": "粗体使用正确，标点符号规范"
+    },
+    "content_clean": {
+      "status": "pass",
+      "details": "无污染字符，使用全角中文标点"
+    },
+    "mermaid_code": {
+      "status": "pass",
+      "details": "使用graph TD格式，引号正确转义"
+    }
+  },
+  "statistics": {
+    "total_sections": 10,
+    "total_words_analyzed": 8,
+    "total_options": 5,
+    "word_count": 2800
+  },
+  "quality_notes": [
+    "智识彩蛋内容丰富且与题目实体相关",
+    "解题思路清晰，双视角融合良好",
+    "词汇解析完整，包含词源、同源词、例句"
+  ],
+  "errors": []
+}

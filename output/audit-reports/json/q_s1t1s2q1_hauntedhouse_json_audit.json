@@ -1,0 +1,56 @@
+{
+  "file": "q_s1t1s2q1_hauntedhouse.json",
+  "timestamp": "2025-10-05T16:01:00Z",
+  "audit_type": "json_format",
+  "auditor": "Node.js JSON.parse + Custom Validator",
+  "result": {
+    "status": "pass",
+    "grade": "A",
+    "ready_for_import": true
+  },
+  "checks": {
+    "format_valid": {
+      "status": "pass",
+      "method": "JSON.parse()",
+      "details": "JSON语法完全正确"
+    },
+    "required_fields_complete": {
+      "status": "pass",
+      "missing_fields": [],
+      "details": "所有必需字段都存在"
+    },
+    "vocabulary_complete": {
+      "status": "pass",
+      "required_words": ["belief", "numinous", "insist", "haunt", "clamorous", "invidious", "empirical", "sonorous"],
+      "found_words": ["belief", "numinous", "insist", "haunt", "clamorous", "invidious", "empirical", "sonorous"],
+      "missing_words": [],
+      "coverage": "100%"
+    },
+    "data_types_correct": {
+      "status": "pass",
+      "details": "所有字段类型符合预期"
+    },
+    "special_chars_safe": {
+      "status": "pass",
+      "details": "Mermaid代码中的双引号已正确转义"
+    },
+    "data_reasonable": {
+      "status": "pass",
+      "checks": {
+        "difficulty_score_range": "3/10 在合理范围内",
+        "difficulty_level_match": "Easy 与 score=3 匹配",
+        "correct_answer_exists": "C 存在于选项中",
+        "uuid_format": "符合 q_[source]_[noun] 规范"
+      }
+    }
+  },
+  "statistics": {
+    "file_size": "13KB",
+    "vocabulary_count": 8,
+    "options_count": 5,
+    "analysis_sections": 7
+  },
+  "errors": [],
+  "warnings": [],
+  "import_ready": true
+}
