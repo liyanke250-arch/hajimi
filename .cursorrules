@@ -198,11 +198,49 @@ Closes #123
 ## 项目特定规则
 
 ### GRE 题目处理
-- 题目内容使用 JSON 存储
+- 题目内容使用 JSON 存储（@db.Text 支持1GB）
 - 支持数学公式渲染 (KaTeX)
-- 题目类型: verbal, quantitative, writing
-- 难度级别: easy, medium, hard
-- 标签系统用于知识点分类
+- 题目类型: 10种（TEXT_COMPLETION, READING_COMPREHENSION等）
+- 难度级别: EASY, MEDIUM, HARD
+- 词汇全局唯一（word字段UNIQUE）
+- 自动去重机制（upsert + findUnique）
+
+### JSON 格式规范
+- JSON结构使用英文双引号 "
+- 文本内容可以使用反引号 ` 强调
+- 文本内容可以使用 Markdown ** 格式化
+- 避免中文引号混淆（" " 可能被误解析）
+- Mermaid代码必须转义双引号（\"）
+- 使用全角中文标点（："（）等）
+
+### 数据库开发规范
+- 开发环境使用 hajimi-dev 数据库
+- 生产环境使用 hajimi-prod 数据库
+- 使用直接连接（端口5432）而非连接池（开发环境）
+- 词汇通过 word 字段查询去重，不是 uuid
+- 所有JSON字段使用 @db.JsonB 类型
+- 超长文本使用 @db.Text 类型
+
+### 导入系统规范
+- 导入前验证JSON格式
+- 词汇自动去重（getOrCreateVocabulary）
+- 使用事务处理批量操作
+- 详细日志输出（✅ 创建, ♻️ 复用）
+- 错误时记录详细信息
+
+### 前端开发规范
+- 使用 Server Components 作为默认
+- 数据库查询在服务端进行
+- 使用 Tailwind 实现响应式设计
+- 渐变背景提升视觉效果
+- 折叠式内容节省空间
+- 固定导航栏改善用户体验
+
+### CMS 管理规范
+- Directus启动需要禁用SSL验证
+- 使用start.bat脚本启动
+- 管理员凭据保存在cms/CREDENTIALS.md
+- 不要将.env文件提交到Git
 
 ### 用户学习数据
 - 记录每次答题的详细信息
@@ -214,23 +252,56 @@ Closes #123
 ### 性能目标
 - 首屏加载时间 < 2秒
 - Core Web Vitals 达到 Good 标准
-- 支持离线缓存关键资源
-- 优化数据库查询性能
-- 使用 CDN 加速静态资源
+- 数据库查询 < 100ms
+- 词汇去重优化（usage_count统计）
+- 使用索引优化查询性能
 
 ## 参考文档
+
+### 核心文档
+- START_HERE.md: 超级简单新手指南
+- QUICK_REFERENCE.md: 快速参考卡
+- README_SUCCESS.md: 项目成功报告
+- FINAL_SUMMARY_20251005.md: 今日成就总结
+
+### 技术文档
+- docs/DATABASE_DESIGN.md: 数据库设计详解
+- docs/FAQ_DATABASE.md: 常见问题解答（给小白）
+- docs/ENVIRONMENT_SETUP.md: 环境配置指南
+- docs/BATCH_IMPORT_GUIDE.md: 批量导入指南
+- docs/JSON_COMPARISON.md: JSON格式对比
+
+### 原始文档
 - PRD.md: 产品需求文档
 - DEVELOPMENT.md: 开发文档
 - docs/coding-standards.md: 代码注释规范
-- project 01-04.md: Sprint 任务文档
+- WORKFLOW.md: 工作流程文档
+
+## 已完成的里程碑
+- ✅ 数据库设计和部署（9个核心表）
+- ✅ 自动导入系统（词汇去重验证成功）
+- ✅ Directus CMS 管理后台
+- ✅ 前端演示页面（/demo）
+- ✅ 7道题目成功导入
+- ✅ 61个词汇（自动去重）
+- ✅ 所有功能验证通过
+
+## 下一步计划
+- 🔄 设计自动化生成流程
+- 🔄 批量导入剩余题目
+- 🔄 优化前端UI和交互
+- 🔄 开发用户系统
 
 ## 注意事项
 - 优先使用项目已有的组件和工具函数
-- 重大架构变更需要团队讨论
+- JSON格式必须严格遵守规范
+- 词汇去重通过word字段，不是uuid
+- 使用GitHub Desktop推送代码（网络问题）
+- Directus需要禁用SSL验证启动
 - 保持代码简洁和可读性
-- 定期更新依赖包版本
 - 遵循渐进式开发原则
 
 ---
-最后更新: 2025-10-05
+最后更新: 2025-10-05 23:59
 维护者: Hajimi 开发团队
+项目状态: 🚀 核心系统完成，演示验证通过
