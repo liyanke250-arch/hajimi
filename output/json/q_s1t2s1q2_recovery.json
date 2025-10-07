@@ -1,0 +1,304 @@
+{
+  "uuid": "q_s1t2s1q2_recovery",
+  "source_id": "Stage 1 Test 2 Section 1-2",
+  "version": 10.0,
+  "createdAt": "2025-10-06T02:10:00.000Z",
+  "updatedAt": "2025-10-06T02:10:00.000Z",
+  "difficulty": {
+    "level": "Medium",
+    "score": 5.0,
+    "factors": {
+      "sentence_complexity": "中",
+      "vocab_rarity": "中",
+      "logic_subtlety": "中"
+    }
+  },
+  "questionText": "The economic recovery was somewhat lopsided: (i)_________ in some of the industrial economies while (ii)_________ in others of them.",
+  "options": [
+    { "choice": "A", "text": "unexpected" },
+    { "choice": "B", "text": "feeble" },
+    { "choice": "C", "text": "swift" },
+    { "choice": "D", "text": "robust" },
+    { "choice": "E", "text": "turbulent" },
+    { "choice": "F", "text": "predictable" }
+  ],
+  "correctAnswer": "B, D",
+  "analysis": {
+    "intellectualEasterEgg": {
+      "title": "聚焦经济复苏 (Economic Recovery)",
+      "association_principle": "Strong Entity Association",
+      "content": [
+        "罗斯福新政的多面影响：1933年富兰克林·罗斯福推行新政以应对大萧条。这一系列政策对不同行业和地区的影响差异巨大：田纳西河流域管理局使南方贫困地区获得电力和就业，而某些北方制造业却因为新的监管而陷入困境。这种地区间的差异性复苏，改变了美国的经济地图。",
+        "马歇尔计划的选择性援助：二战后，马歇尔计划向欧洲提供了约130亿美元援助，但这些资金的分配并不均匀。西欧国家如英国、法国、西德获得了大部分援助并迅速重建，而东欧在苏联影响下被排除在外。这种援助的选择性，直接塑造了战后欧洲的经济格局和冷战分界线。",
+        "复苏时钟的时区差异：经济史学家发现，同一次全球性经济危机后，不同国家进入复苏期的时间可能相差数年。1997年亚洲金融危机后，韩国在1999年就开始反弹，而印度尼西亚的政治动荡使其复苏推迟到2001年之后。这种时差源于政治稳定性、制度质量和国际资本流动等多重因素。"
+      ]
+    },
+    "logicType": {
+      "officialTag": "contrast-paradox",
+      "signal_words": ["while", "lopsided"],
+      "oneLiner": "同一个复苏，在不同地方呈现相反或不同的特征",
+      "challenge": "理解lopsided暗示两个空格应该填入形成某种对比或差异的词"
+    },
+    "logicAndWalkthrough": [
+      {
+        "step": 1,
+        "step_name_cn": "理解lopsided的含义",
+        "strategy_expert": "lopsided意为不平衡的、一边倒的。这预示着经济复苏在不同地区呈现出不同的特征。while连接的两个空格描述了这种差异。",
+        "thought_process_os": "复苏是不平衡的，那就是说有的地方这样，有的地方那样，不一样。第一空和第二空可能形成对比，也可能只是不同的特征。"
+      },
+      {
+        "step": 2,
+        "step_name_cn": "分析第一空 (i)",
+        "strategy_expert": "第一空描述某些经济体的复苏特征。结合lopsided，这个特征应该是某种正面或负面的描述。",
+        "thought_process_os": "A. unexpected：意外的。可能，但不是最强的对比。B. feeble：虚弱的。如果选这个，第二空应该是强劲的。C. swift：迅速的。如果选这个，第二空可能是缓慢或其他特征。"
+      },
+      {
+        "step": 3,
+        "step_name_cn": "分析第二空 (ii) 并确定配对",
+        "strategy_expert": "第二空描述另一些经济体的复苏。要与第一空形成不平衡的对比或差异。",
+        "thought_process_os": "D. robust：强劲的。如果第一空是feeble，就是虚弱vs强劲的对比。E. turbulent：动荡的。可能与swift对比。F. predictable：可预测的。如果第一空是unexpected，就是意外vs可预测。最自然的对比是：B（feeble）+ D（robust）。考虑lopsided强调不平衡，B+D（弱vs强）是最直接的对比。"
+      }
+    ],
+    "optionsAnalysis": [
+      {
+        "option": "A. unexpected",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个相关但不精确的选项。虽然unexpected与predictable可以形成对比，但这种对比强调的是预期性，而非复苏的质量或速度，不如其他组合直接体现lopsided的不平衡。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "B. feeble",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "feeble 意为虚弱的、无力的。与第二空的robust（强劲的）形成鲜明对比，完美体现经济复苏的lopsided——有些经济体复苏疲软，有些则强劲有力。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "C. swift",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个相关但不精确的选项。虽然swift（迅速）是正面特征，但题目用lopsided强调的是质量/强度的对比（弱vs强），而非速度的对比。选项中没有对应的slow（缓慢），无法形成清晰的速度对比，因此C不如B+D的组合准确。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "D. robust",
+        "isCorrect": true,
+        "analysis": {
+          "analysis_text": "robust 意为强劲的、健壮的。与第一空的feeble形成最直接、最强烈的对比，是体现lopsided recovery的最佳选择。",
+          "trap_types": null
+        }
+      },
+      {
+        "option": "E. turbulent",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个相关但不精确的选项。动荡的虽然是负面特征，但与swift的配对不如feeble与robust的对比直接。",
+          "trap_types": ["Related but Imprecise"]
+        }
+      },
+      {
+        "option": "F. predictable",
+        "isCorrect": false,
+        "analysis": {
+          "analysis_text": "这是一个无关概念的选项。可预测的与复苏的强弱、快慢无关。",
+          "trap_types": ["Irrelevant Concept"]
+        }
+      }
+    ],
+    "sentenceWithAnswer": "The economic recovery was somewhat lopsided: feeble in some of the industrial economies while robust in others of them.",
+    "translation": "经济复苏有些不平衡：在一些工业经济体中疲软，而在另一些经济体中强劲。",
+    "grammaticalAnalysis": {
+      "translation_notes": "lopsided 意为不平衡的。while 在这里表示对比。",
+      "breakdown_hierarchical": [
+        "主句：The economic recovery was somewhat lopsided",
+        "冒号后：省略了主语和系动词的并列结构，完整形式是 (it was) feeble... while (it was) robust...",
+        "in some of the industrial economies 和 in others of them 是地点状语。"
+      ],
+      "visual_tree_mermaid": "graph TD; A[\\\"Recovery was lopsided\\\"] --> B[\\\"Feeble in some economies\\\"]; A --> C[\\\"While robust in others\\\"];"
+    }
+  },
+  "vocabulary": [
+    {
+      "uuid": "v_20251006_economic",
+      "word": "economic",
+      "version": 1.0,
+      "phonetic": "[ˌiːkəˈnɒmɪk]",
+      "definition_cn": "adj. 经济的，经济学的",
+      "etymology": {
+        "deconstruction": "源自希腊语 oikonomia，意为家庭管理",
+        "constructive_essence": "从家庭管理（eco=house + nom=manage）扩展到整个社会的资源管理，即经济。"
+      },
+      "cognates": [
+        { "word": "economy", "definition_cn": "n. 经济" },
+        { "word": "economical", "definition_cn": "adj. 节约的" }
+      ],
+      "example": {
+        "sentence": "The economic situation is improving.",
+        "translation_cn": "经济形势正在好转。"
+      }
+    },
+    {
+      "uuid": "v_20251006_recovery",
+      "word": "recovery",
+      "version": 1.0,
+      "phonetic": "[rɪˈkʌvəri]",
+      "definition_cn": "n. 恢复，复苏",
+      "etymology": {
+        "deconstruction": "re- (again，再次) + cover (覆盖)",
+        "constructive_essence": "指重新覆盖或重新获得，即恢复。"
+      },
+      "cognates": [
+        { "word": "recover", "definition_cn": "v. 恢复，康复" },
+        { "word": "cover", "definition_cn": "v. 覆盖" }
+      ],
+      "example": {
+        "sentence": "The patient made a full recovery.",
+        "translation_cn": "病人完全康复了。"
+      }
+    },
+    {
+      "uuid": "v_20251006_lopsided",
+      "word": "lopsided",
+      "version": 1.0,
+      "phonetic": "[ˌlɒpˈsaɪdɪd]",
+      "definition_cn": "adj. 不平衡的，一边倒的",
+      "etymology": {
+        "deconstruction": "lop (下垂，倾斜) + sided (有...边的)",
+        "constructive_essence": "指一边下垂，即不平衡的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "The game was lopsided from the start.",
+        "translation_cn": "比赛从一开始就一边倒。"
+      }
+    },
+    {
+      "uuid": "v_20251006_industrial",
+      "word": "industrial",
+      "version": 1.0,
+      "phonetic": "[ɪnˈdʌstriəl]",
+      "definition_cn": "adj. 工业的，产业的",
+      "etymology": {
+        "deconstruction": "industry (工业) + -al",
+        "constructive_essence": "指与工业有关的。"
+      },
+      "cognates": [
+        { "word": "industry", "definition_cn": "n. 工业，行业" },
+        { "word": "industrious", "definition_cn": "adj. 勤勉的" }
+      ],
+      "example": {
+        "sentence": "The industrial revolution changed the world.",
+        "translation_cn": "工业革命改变了世界。"
+      }
+    },
+    {
+      "uuid": "v_20251006_unexpected",
+      "word": "unexpected",
+      "version": 1.0,
+      "phonetic": "[ˌʌnɪkˈspektɪd]",
+      "definition_cn": "adj. 意外的，出乎意料的",
+      "etymology": {
+        "deconstruction": "un- (not，不) + expected (预期的)",
+        "constructive_essence": "指不被预期的。"
+      },
+      "cognates": [
+        { "word": "expect", "definition_cn": "v. 期待" },
+        { "word": "expectation", "definition_cn": "n. 期望" }
+      ],
+      "example": {
+        "sentence": "The result was unexpected.",
+        "translation_cn": "结果出乎意料。"
+      }
+    },
+    {
+      "uuid": "v_20251006_feeble",
+      "word": "feeble",
+      "version": 1.0,
+      "phonetic": "[ˈfiːbl]",
+      "definition_cn": "adj. 虚弱的，无力的",
+      "etymology": {
+        "deconstruction": "源自拉丁语 flebilis，意为值得哭泣的",
+        "constructive_essence": "从值得哭泣的引申为虚弱的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "He made a feeble attempt to resist.",
+        "translation_cn": "他做了一次无力的抵抗。"
+      }
+    },
+    {
+      "uuid": "v_20251006_swift",
+      "word": "swift",
+      "version": 1.0,
+      "phonetic": "[swɪft]",
+      "definition_cn": "adj. 迅速的，快的",
+      "etymology": {
+        "deconstruction": "源自古英语，与sweep（扫）同源",
+        "constructive_essence": "像扫过一样快，即迅速的。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "She gave a swift response.",
+        "translation_cn": "她迅速作出了回应。"
+      }
+    },
+    {
+      "uuid": "v_20251006_robust",
+      "word": "robust",
+      "version": 1.0,
+      "phonetic": "[rəʊˈbʌst]",
+      "definition_cn": "adj. 强健的，强劲的",
+      "etymology": {
+        "deconstruction": "源自拉丁语 robustus，意为像橡树一样强壮",
+        "constructive_essence": "指像橡树（oak）一样强健有力。"
+      },
+      "cognates": [],
+      "example": {
+        "sentence": "The economy showed robust growth.",
+        "translation_cn": "经济显示出强劲增长。"
+      }
+    },
+    {
+      "uuid": "v_20251006_turbulent",
+      "word": "turbulent",
+      "version": 1.0,
+      "phonetic": "[ˈtɜːbjələnt]",
+      "definition_cn": "adj. 动荡的，混乱的",
+      "etymology": {
+        "deconstruction": "源自拉丁语 turba，意为混乱、骚动",
+        "constructive_essence": "指充满混乱和骚动的。"
+      },
+      "cognates": [
+        { "word": "turbulence", "definition_cn": "n. 动荡，湍流" },
+        { "word": "disturb", "definition_cn": "v. 打扰" }
+      ],
+      "example": {
+        "sentence": "The country went through turbulent times.",
+        "translation_cn": "这个国家经历了动荡时期。"
+      }
+    },
+    {
+      "uuid": "v_20251006_predictable",
+      "word": "predictable",
+      "version": 1.0,
+      "phonetic": "[prɪˈdɪktəbl]",
+      "definition_cn": "adj. 可预测的",
+      "etymology": {
+        "deconstruction": "pre- (before，预先) + dict (say，说) + -able",
+        "constructive_essence": "指可以预先说出的，即可预测的。"
+      },
+      "cognates": [
+        { "word": "predict", "definition_cn": "v. 预测" },
+        { "word": "dictionary", "definition_cn": "n. 词典（说话的工具）" }
+      ],
+      "example": {
+        "sentence": "His reaction was predictable.",
+        "translation_cn": "他的反应是可以预料的。"
+      }
+    }
+  ]
+}
