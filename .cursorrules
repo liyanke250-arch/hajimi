@@ -198,6 +198,46 @@ Closes #123
 ## 项目特定规则
 
 ### GRE 题目处理
+
+#### 填空题题型分类（重要！）
+
+**识别方法**: 
+- 看选项数量：5个=单空，6个=等价或双空，9个=三空
+- 看空格数量：1个空+6选项=等价
+- 看选项分组：有表格=多空题
+
+**1. 单空5选1（Text Completion - Single Blank）**
+- 特征: 1个空格，5个选项（A-E）
+- 答案: 1个正确答案
+- 固定例子: "It is a paradox of the Victorians..." (q_s1t1s1q1_victorians)
+
+**2. 句子等价（Sentence Equivalence - 6选2）**
+- 特征: 1个空格，6个选项（A-F）
+- 答案: 2个同义词（让句子意思相同）
+- 关键: 两个答案填入后句子意思基本相同
+- 固定例子: "The beauty of the scientific approach..." (q_s1t1s1q4_scientificapproach)
+  - 正确答案: C (succumb to) + E (yield to) - 两个都表示"屈服"
+
+**3. 双空题（Text Completion - Two Blanks）**
+- 特征: 2个空格，6个选项（分两组）
+  - Blank (i): A, B, C
+  - Blank (ii): D, E, F
+- 答案: 2个答案（每个空一个，如 C, E）
+- 选项用表格呈现
+- 固定例子: "The (i)___ of molecular oxygen..." (q_s1t1s1q2_molecularoxygen)
+  - 正确答案: C (detection), E (an unambiguous)
+
+**4. 三空题（Text Completion - Three Blanks）**
+- 特征: 3个空格，9个选项（分三组）
+  - Blank (i): A, B, C
+  - Blank (ii): D, E, F
+  - Blank (iii): G, H, I
+- 答案: 3个答案（每个空一个，如 B, E, G）
+- 选项用表格呈现
+- 固定例子: "The skin of the poison dart frog..." (q_s1t1s1q3_poisondartfrog)
+  - 正确答案: B (origin), E (produce), G (eaten)
+
+#### 数据存储规范
 - 题目内容使用 JSON 存储（@db.Text 支持1GB）
 - 支持数学公式渲染 (KaTeX)
 - 题目类型: 10种（TEXT_COMPLETION, READING_COMPREHENSION等）
